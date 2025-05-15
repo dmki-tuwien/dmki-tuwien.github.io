@@ -13,13 +13,23 @@
     .hero {
       background: linear-gradient(to right, #9bc1fa, #478ffc);
       color: white;
-      padding: 100px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
     .footer {
       background-color: #f8f9fa;
       padding: 20px 0;
       text-align: center;
+    }
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+    .navbar img {
+      max-height: 40px;
+      height: auto;
+      object-fit: contain;
     }
   </style>
 </head>
@@ -28,17 +38,20 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container">
-    <img src="dmki-logo.png" alt="DMKI Lab Logo" class="img-fluid" style="max-width: 40px; padding-right: 5px;">
-    <a class="navbar-brand" href="#">DMKI Lab</a>
+    <div class="d-flex align-items-center gap-3 flex-wrap">
+      <img src="dmki-logo.png" alt="DMKI Lab Logo" style="height: 40px;">
+      <a class="navbar-brand mb-0 h1" href="index.html">DMKI Lab</a>
+      <img src="dbai-logo.png" alt="DBAI Logo" style="height: 40px;">
+      <img src="tuinformatics-logo.svg" alt="TUW Informatics Logo" style="height: 40px;">
+    </div>
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img src="dbai-logo.png" alt="DBAI" class="img-fluid" style="max-width: 100px; padding-right: 20px;">
-    <img src="tuinformatics-logo.svg" alt="TUW Informatics" class="img-fluid" style="max-width: 190px; padding-right: 5px;">
-	  
+
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
         <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
@@ -48,30 +61,249 @@
   </div>
 </nav>
 
+
 <!-- Hero Section -->
 <section class="hero">
   <div class="container">
-    <img src="dmki-logo.png" alt="DMKI Lab Logo" class="img-fluid mb-4" style="max-width: 200px;">
-    <h1 class="display-4">DMKI Lab</h1>
-    <p class="lead">We explore the frontiers of knowledge graphs, AI, and data science.</p>
-    <a href="#about" class="btn btn-outline-light btn-lg mt-3">Learn More</a>
+    <img src="dmki-logo.png" alt="DMKI Lab Logo" class="img-fluid mb-4" style="max-width: 150px;">
+    <h1 class="display-6">DMKI Lab</h1>
+    <p class="lead">Data Management and Knowledge-Driven AI</p>
+<!--    <p class="lead">We explore the frontiers of knowledge graphs, AI, and data science.</p> -->
+<!--    <p>cutting-edge advancements in knowledge graphs, data management, AI, and their applications in healthcare, analytics, and more.</p>-->
+<!--    <a href="#about" class="btn btn-outline-light btn-lg mt-3">Learn More</a>-->
   </div>
 </section>
 
 <!-- About Section -->
-<section id="about" class="py-5">
+<section id="about" class="py-3">
   <div class="container">
-    <h2>About Us</h2>
-    <p>The&nbsp; <b>Data Management and Knowledge-Driven AI (DMKI)</b> Lab is part of the  <a href="https://www.dbai.tuwien.ac.at/">Databases and Artificial Intelligence (DBAI)</a> group at the <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank">Institute of Logic and Computation</a> of <a href="https://www.tuwien.at" target="_blank">TU Wien</a>'s Faculty of Informatics in Vienna, Austria.&nbsp;</p>
-    <p>Our research focuses on cutting-edge advancements in knowledge graphs, data management, AI, and their applications in healthcare, analytics, and more.</p>
+<!--    <h2>About Us</h2> -->
+    <p>The&nbsp; <b>Data Management and Knowledge-Driven AI (DMKI)</b> Lab is part of the  <a href="https://www.dbai.tuwien.ac.at/">Databases and Artificial Intelligence (DBAI)</a> group at <a href="https://www.tuwien.at" target="_blank">TU Wien</a>'s <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank">Institute of Logic and Computation</a> and the Faculty of Informatics.&nbsp;</p>
+<!--    <p>Our joint ambition is to bring meaning to large amounts of heterogeneous data and exploit it in the best possible way for a broad range of use cases and applications, with particular focus on healthcare and bioscience.</p> -->
+    <p>Our research focuses on cutting-edge advancements in knowledge graphs, data management, AI, and their applications in healthcare, analytics, and more.</p> 
+  </div>
+</section>
+
+<!-- News Section -->
+<section id="news" class="py-3">
+  <div class="container">
+    <h2>Latest News</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              New Horizon Europe Project: ARMADA
+              <span class="badge bg-success">Project</span>
+            </h5>
+            <p class="card-text">
+              We’re excited to announce the start of our Horizon Europe project <a href="https://armada-dn.eu/" target="_blank">ARMADA</a>, focused on conversational data exploration. The project runs from 2025 to 2029.
+            </p>
+            <p class="text-muted mb-0"><small>May 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Paper Accepted at VLDB 2025
+              <span class="badge bg-warning text-dark">Publication</span>
+            </h5>
+            <p class="card-text">
+              The paper "PlanRGCN: Predicting SPARQL Query Performance" by A. Moharanaj, <a href="https://lissandrini.com/" target="_blank">M. Lissandrini</a>, and <a href="http://katja-hose.de" target="_blank">K. Hose</a> has been accepted for publication at <a href="https://vldb.org/2025/" target="_blank"> VLDB 2025</a>.
+            </p>
+            <p class="text-muted mb-0"><small>April 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Welcome New Team Member
+              <span class="badge bg-primary">Team</span>
+            </h5>
+            <p class="card-text">
+              Welcome to our new PhD researcher, Koumudi Ganepola, who has joined the DMKI Lab in March 2025.
+            </p>
+            <p class="text-muted mb-0"><small>March 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              VLDB 2025 Paper Accepted
+              <span class="badge bg-warning text-dark">Publication</span>
+            </h5>
+            <p class="card-text">
+              The paper "The Limits of Graph Samplers for Training Inductive Recommender Systems" by T. E. Jendal, <a href="https://lissandrini.com/" target="_blank">M. Lissandrini</a>, P. Dolog, and <a href="http://katja-hose.de" target="_blank">K. Hose</a> has been accepted for publication at <a href="https://vldb.org/2025/" target="_blank"> VLDB 2025</a>.
+            </p>
+            <p class="text-muted mb-0"><small>April 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              TARGET Annual Meeting
+              <span class="badge bg-success">Project</span>
+            </h5>
+            <p class="card-text">
+              TUW participants <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, T. Sagi, and S. El-Sherbiny attended <a href="https://target-horizon.eu" target="_blank">TARGET</a>'s annual consortium meeting in Lund.
+            </p>
+            <p class="text-muted mb-0"><small>March 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Talk at EDBT 2025 Industry Event
+              <span class="badge bg-info text-dark">Talk</span>
+            </h5>
+            <p class="card-text">
+              <a href="http://katja-hose.de" target="_blank">Katja Hose</a> gave a talk on "Knowledge Graphs: Challenges for GDBMS and AI" at the <a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a> industry event on Next-Generation Data Management Systems.
+            </p>
+            <p class="text-muted mb-0"><small>March 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              EDBT 2025 Meta-Reviewer Award
+              <span class="badge bg-secondary">Award</span>
+            </h5>
+            <p class="card-text">
+              <a href="http://katja-hose.de" target="_blank">Katja Hose</a> received a distinguished meta-reviewer award at <a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a>.
+            </p>
+            <p class="text-muted mb-0"><small>March 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Paper Presented at EDBT 2025
+              <span class="badge bg-warning text-dark">Publication</span>
+            </h5>
+            <p class="card-text">
+              Martin P. Christensen presented the paper "Fantastic Tables and Where to Find Them: Table Search in Semantic Data Lakes" at <a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a>, authored by M. P. Christensen, A. Leventidis, <a href="https://lissandrini.com/" target="_blank">M. Lissandrini</a>, L. Di Rocco, R. J. Miller, and <a href="http://katja-hose.de" target="_blank">K. Hose</a>.
+            </p>
+            <p class="text-muted mb-0"><small>March 2024</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Conversational Data Analytics at EDBT
+              <span class="badge bg-warning text-dark">Publication</span>
+            </h5>
+            <p class="card-text">
+              Davide and Matteo presented our work "Towards Reliable Conversational Data Analytics" at <a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a>. Authors include S. Amer-Yahia, J. Bogojeska, R. Facchinetti, V. Franceschi, A. Gionis, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, G. Koutrika, R. Kouyos, <a href="https://lissandrini.com/" target="_blank">M. Lissandrini</a>, S. Maniu, K. Mirylenka, D. Mottin, T. Palpanas, M. Rigotti, and Y. Velegrakis.
+            </p>
+            <p class="text-muted mb-0"><small>March 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Keynote at GOBLIN Plenary
+              <span class="badge bg-info text-dark">Keynote</span>
+            </h5>
+            <p class="card-text">
+              <a href="http://katja-hose.de" target="_blank">Katja Hose</a> gave a keynote on "Introduction to Knowledge Graphs" at the first GOBLIN plenary meeting in Prague.
+            </p>
+            <p class="text-muted mb-0"><small>February 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Welcome New Team Member
+              <span class="badge bg-primary">Team</span>
+            </h5>
+            <p class="card-text">
+              <a href="https://mjovanovik.com/" target="_blank">Milos Jovanovik</a> has joined the DMKI Lab as a postdoctoral researcher. Welcome!
+            </p>
+            <p class="text-muted mb-0"><small>February 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Web Conference 2025 Paper Accepted
+              <span class="badge bg-warning text-dark">Publication</span>
+            </h5>
+            <p class="card-text">
+              The paper "Common Foundations of SHACL, ShEx, and PG-Schema" has been accepted at The Web Conference 2025. Authors: S. Ahmetaj, I. Boneva, J. Hidders, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, J.E.L. Gayo, W. Martens, F. Mogavero, F. Murlak, C. Okulmus, A. Polleres, O. Savkovic, M. Simkus, D. Tomaszuk.
+            </p>
+            <p class="text-muted mb-0"><small>January 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Dagstuhl Seminar Participation
+              <span class="badge bg-secondary">Event</span>
+            </h5>
+            <p class="card-text">
+              <a href="http://katja-hose.de" target="_blank">Katja Hose</a> participated in the Dagstuhl Seminar "Trust and Accountability in Knowledge Graph-Based AI for Self Determination".
+            </p>
+            <p class="text-muted mb-0"><small>January 2025</small></p>
+          </div>
+        </div>
+      </div>
+    
+    </div> <!-- END of class="row row-cols-1 row-cols-md-2 g-4" -->
+
+    <div class="mt-3">
+      <a href="news_full.html" class="btn btn-outline-primary btn-sm">More News</a>
+    </div>
+
+  </div>
+</section>
+
+
   </div>
 </section>
 
 <!-- Team Section -->
-<section id="team" class="py-5">
+<section id="team" class="py-3">
   <div class="container">
-    <h2>Our Team</h2>
-    <p>Meet our  team of professors, postdocs, PhD candidates, and collaborators.</p>
+    <h2>Team</h2>
+<!--    <p>Meet our  team of professors, postdocs, PhD candidates, and collaborators.</p> -->
     <ul class="list-group">
       <li class="list-group-item"><a href="http://katja-hose.de/" target="_blank">Univ.-Prof. Dr.-Ing. Katja Hose</a> - Research Lead</li>
       <li class="list-group-item"><a href="https://mjakubowski.info/" target="_blank">Dr. Maxime Jakubowski</a> - Postdoctoral Researcher</li>
@@ -82,10 +314,10 @@
 </section>
 
 <!-- Projects Section -->
-<section id="projects" class="py-5 bg-light">
+<section id="projects" class="py-3 bg-light">
   <div class="container">
-    <h2>Projects</h2>
-    <p>Explore our ongoing projects driving innovation in data management, knowledge graphs, and AI.</p>
+    <h2>Active Projects</h2>
+<!--    <p>Explore our ongoing projects driving innovation in data management, knowledge graphs, and AI.</p> -->
     <ul class="list-group">
       <li class="list-group-item"><a href="https://armada-dn.eu/" target="_blank">ARMADA: Reliable Conversational Domain-specific
 Data Exploration and Analysis</a>. Horizon Europe Marie Skłodowska-Curie <a href="https://cordis.europa.eu/project/id/101168951" target="_blank">#101168951</a>. [2025-2029]</li>
@@ -95,7 +327,7 @@ Data Exploration and Analysis</a>. Horizon Europe Marie Skłodowska-Curie <a hre
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-5 bg-light">
+<section id="contact" class="py-3 bg-light">
   <div class="container">
     <h2>Contact</h2>
     <p>Reach out to us for collaboration opportunities or student projects.</p>
