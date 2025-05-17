@@ -34,10 +34,23 @@
 	.card-title {
 	  font-weight: 600;
 	}
-
 	.card-img-top {
-	  object-fit: cover;
-	  height: 300px;
+	  width: 100%;
+	  height: 150px;
+	  object-fit: contain;
+	}
+	.card-body {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-between;
+	}
+
+	.card-body .card-text {
+	  flex-grow: 1;
+	}
+
+	.card-body .btn-group {
+	  margin-top: 1rem;
 	}
   </style>
 </head>
@@ -46,12 +59,19 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container">
-    <div class="d-flex align-items-center gap-3 flex-wrap">
-      <img src="dmki-logo.png" alt="DMKI Lab Logo" style="height: 40px;">
-      <a class="navbar-brand mb-0 h1" href="index.html">DMKI Lab</a>
-      <img src="dbai-logo.png" alt="DBAI Logo" style="height: 40px;">
-      <img src="tuinformatics-logo.svg" alt="TUW Informatics Logo" style="height: 40px;">
-    </div>
+	  
+	<div class="d-flex align-items-center gap-2 flex-wrap">
+	  <a href="index.html" class="d-flex align-items-center" style="margin-right: -12px; text-decoration: none;">
+		<img alt="DMKI Lab Logo" src="dmki-logo.png" style="height: 40px;" />
+		<span class="navbar-brand mb-0 h1 ms-2">DMKI Lab</span>
+	  </a>
+	  <a href="https://www.dbai.tuwien.ac.at/" target="_blank" rel="noopener">
+		<img alt="DBAI Logo" src="dbai-logo.png" style="height: 40px;" />
+	  </a>
+	  <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank" rel="noopener">
+		<img alt="TUW Informatics Logo" src="tuinformatics-logo.svg" style="height: 40px;" />
+	  </a>
+	</div>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -59,10 +79,10 @@
 
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#team">Team</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
     </div>
@@ -315,7 +335,7 @@
         <div class="card h-100 text-center border-0 shadow-sm">
           <img src="katjahose.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Katja Hose" style="width: 200px; height: 200px; object-fit: cover; object-position: center top;">
           <div class="card-body">
-            <h5 class="card-title">Dr.-Ing. Katja Hose</h5>
+            <h5 class="card-title">Prof. Dr.-Ing. Katja Hose</h5>
             <p class="card-text text-muted">Full Professor<br>Research Lead</p>
             <a href="https://www.dbai.tuwien.ac.at/staff/khose/About_me.html" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
           </div>
@@ -351,7 +371,7 @@
   <div class="card h-100 shadow-sm border-0">
     <img src="koumudiganepola.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Koumudi Ganepola" style="width: 200px; height: 200px; object-fit: cover; object-position: center 25%;">
     <div class="card-body text-center">
-      <h5 class="card-title">Koumudi Ganepola</h5>
+      <h5 class="card-title">MSc Koumudi Ganepola</h5>
       <p class="card-text text-muted">PhD Student</p>
       <a href="https://informatics.tuwien.ac.at/people/koumudi-ganepola" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
     </div>
@@ -363,7 +383,7 @@
   <div class="card h-100 shadow-sm border-0">
     <img src="johannesschrott.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Johannes Schrott" style="width: 200px; height: 200px; object-fit: cover;">
     <div class="card-body text-center">
-      <h5 class="card-title">Johannes Schrott</h5>
+      <h5 class="card-title">MSc Johannes Schrott</h5>
       <p class="card-text text-muted">PhD Student</p>
       <a href="https://johannes.schrott.onl/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
     </div>
@@ -376,17 +396,69 @@
 
 
 <!-- Projects Section -->
-<section id="projects" class="py-3 bg-light">
+<section id="projects" class="py-5 bg-white">
   <div class="container">
-    <h2>Active Projects</h2>
-<!--    <p>Explore our ongoing projects driving innovation in data management, knowledge graphs, and AI.</p> -->
-    <ul class="list-group">
-      <li class="list-group-item"><a href="https://armada-dn.eu/" target="_blank">ARMADA: Reliable Conversational Domain-specific
-Data Exploration and Analysis</a>. Horizon Europe Marie Skłodowska-Curie <a href="https://cordis.europa.eu/project/id/101168951" target="_blank">#101168951</a>. [2025-2029]</li>
-      <li class="list-group-item"><a href="https://target-horizon.eu" target="_blank">TARGET: Health Virtual Twins for the Personalised Management of Stroke Related to Atrial Fibrillation</a>. Horizon Europe Project <a href="https://cordis.europa.eu/project/id/101136244" target="_blank">#101136244</a>. [2024-2028]</li>
-<li class="list-group-item"><a href="https://aristoteles-horizon.eu" target="_blank">ARISTOTELES: Novel Artificial Intelligence (AI) Approaches for Personalised Medicine</a>. Horizon Europe Project <a href="https://cordis.europa.eu/project/id/101080189" target="_blank">#101080189</a>. [2023-2028]</li>
+    <h2 class="mb-5 text-center">Projects</h2>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+
+      <!-- ARMADA Project -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <a href="https://armada-dn.eu/" target="_blank" rel="noopener">
+            <img src="armada-logo.png" class="card-img-top p-4" alt="ARMADA Logo" style="height: 150px; object-fit: contain;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">ARMADA</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> Reliable Conversational Domain-specific Data Exploration and Analysis<br>
+              <strong>Funding:</strong> Horizon MSCA DN (Grant Agreement No. 101168951)
+            </p>
+            <a href="https://armada-dn.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
+<!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+          </div>
+        </div>
+      </div>
+
+      <!-- TARGET Project -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <a href="https://target-horizon.eu/" target="_blank" rel="noopener">
+            <img src="target-logo.jpg" class="card-img-top p-4" alt="TARGET Logo" style="height: 150px; object-fit: contain;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">TARGET</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> Health Vvirtual Twins for the Personalised Management of Stroke Related to Atrial Fibrillation<br>
+              <strong>Funding:</strong> Horizon Europe (Grant Agreement No. 101136244)
+            </p>
+            <a href="https://target-horizon.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
+<!--            <a href="https://cordis.europa.eu/project/id/101136244" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+          </div>
+        </div>
+      </div>
+
+      <!-- ARISTOTELES Project -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <a href="https://aristoteles-horizon.eu/" target="_blank" rel="noopener">
+            <img src="aristoteles-logo.jpg" class="card-img-top p-4" alt="ARISTOTELES Logo" style="height: 150px; object-fit: contain;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">ARISTOTELES</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> Applying Artificial Intelligence to Define Clinical Trajectories for Personalized Prediction and Early Detection of Comorbidity and Multimorbidity Patterns<br>
+              <strong>Funding:</strong> Horizon Europe (Grant Agreement No. 101080189)
+            </p>
+            <a href="https://aristoteles-horizon.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
+<!--            <a href="https://cordis.europa.eu/project/id/101080189" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+          </div>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
+	
 
 <!-- Contact Section -->
 <section id="contact" class="py-3 bg-light">
