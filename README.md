@@ -4,4 +4,4 @@ Website for the Data Management and Knowledge-Driven AI (DMKI) Lab at [TU Wien](
 
 [https://dmki-tuwien.github.io](https://dmki-tuwien.github.io)
 
-<img src="dmki-logo.png" alt="DMKI Lab Logo" width="300"/>
+<img src="img/dmki-logo.png" alt="DMKI Lab Logo" width="300"/>
