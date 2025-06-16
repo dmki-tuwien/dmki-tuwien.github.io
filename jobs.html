@@ -49,49 +49,8 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container">
-    
-  <div class="d-flex align-items-center gap-2 flex-wrap">
-    <a href="index.html" class="d-flex align-items-center" style="margin-right: -12px; text-decoration: none;">
-    <img alt="DMKI Lab Logo" src="img/dmki-logo.png" style="height: 40px;" />
-    <span class="navbar-brand mb-0 h1 ms-2">DMKI Lab</span>
-    </a>
-    <a href="https://www.dbai.tuwien.ac.at/" target="_blank" rel="noopener" class="p-2">
-    <img alt="DBAI Logo" src="img/dbai-logo.png" style="height: 40px;" />
-    </a>
-    <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank" rel="noopener" class="py-2">
-    <img alt="TUW Informatics Logo" src="img/tuinformatics-logo.svg" style="height: 40px;" />
-    </a>
-  </div>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="jobs.html">Jobs</a></li>
-        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
-		<li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <img src="img/dmki-logo.png" alt="DMKI Lab Logo" class="img-fluid mb-4" style="max-width: 150px;">
-    <h1 class="display-6">DMKI Lab</h1>
-    <p class="lead">Data Management and Knowledge-Driven AI</p>
-  </div>
-</section>
+<!-- NavBar & Hero Section-->
+<div data-include="header.html"></div>
 
 <!-- Job Listings -->
 <main class="container py-5">
@@ -128,13 +87,13 @@
         <li>Application deadline: Rolling (applications are reviewed as received)</li>
       </ul>
 
-	  <p>Interested candidates should send a notice of interest along with a draft of their application materials to Prof. Katja Hose.</br>
+	  <p>Interested candidates should send a notice of interest along with a draft of their application materials to Prof. Katja Hose.<br>
       	<a class="btn btn-apply mt-3" href="mailto:katja.hose@tuwien.ac.at?subject=MSCA%20Postdoc%20Application" style="text-decoration: none;">Contact</a>
 	  </p>
     </div>
 	
 
-  <div class="job-card" id=armada>
+  <div class="job-card" id="armada">
     <h4>PhD Position in Knowledge-Graph driven Factuality and Explainability</h4>
     <p>
       We are looking for a highly motivated PhD student to join us at TU Wien and contribute to a groundbreaking project focused on using knowledge graphs to improve factuality and explainability of large language models (LLMs) in the context of conversational data exploration and analytics. <br/>
@@ -168,7 +127,7 @@
         <li>Willingness to contribute in interdisciplinary projects</li>
         <li>Organizational and analytical skills as well as a structured way of working</li>
         <li>Ability to work in a team, problem-solving skills, and creative thinking</li>
-        <li>Excellent spoken and written communication skills in English. <!--Knowledge of German (level B2) or willingness to learn it in the first year</li>-->
+        <li>Excellent spoken and written communication skills in English.</li> <!--Knowledge of German (level B2) or willingness to learn it in the first year</li>-->
       </ul>
     </p>
 
@@ -188,7 +147,7 @@
 
     <p>
       <h5>Special Conditions and Opportunities</h5>
-      This position is part of the European MSCA Doctoral Network <a href="https://armada-dn.eu#" target="_blank">ARMADA</a>, which in total offers <a href="https://armada-dn.eu/call.html#" target="_blank">15 positions</a>. Hence, applicants must not have resided or carried out their main activity (work, studies, etc.) in Austria for more than 12 months in the 3 years immediately prior to the starting date of the position.</br>
+      This position is part of the European MSCA Doctoral Network <a href="https://armada-dn.eu#" target="_blank">ARMADA</a>, which in total offers <a href="https://armada-dn.eu/call.html#" target="_blank">15 positions</a>. Hence, applicants must not have resided or carried out their main activity (work, studies, etc.) in Austria for more than 12 months in the 3 years immediately prior to the starting date of the position.<br>
       The contract will be for 3-year full-time position and include the chance to spend a period of a few months with <a href="https://lissandrini.com/" target="_blank">Matteo Lissandrini</a> at the University of Verona during a planned secondment.
     </p>
     <p>
@@ -211,52 +170,10 @@
 
 </main>
 
-
-
-<!-- Contact Section -->
-<section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4">Contact</h2>
-    <p class="mb-4">Reach out to us for collaboration opportunities or student projects.</p>
-    
-    <div class="row">
-      <!-- Email Card -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Email</h5>
-            <p class="card-text">dmki [dot] tuwien [at] gmail [dot] com</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Address Card -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Postal Address</h5>
-            <p class="card-text mb-0">
-              TU Wien<br>
-              Databases and Artificial Intelligence<br>
-              Favoritenstraße 9<br>
-              A-1040 Wien<br>
-              Austria
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Footer -->
-<footer class="text-center">
-  <div class="container">
-    <small>&copy; 2025 DMKI Lab – TU Wien</small>
-  </div>
-</footer>
-
+<!-- Contact & Footer Section-->
+<div data-include="footer.html"></div>
+	
+<script src="scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

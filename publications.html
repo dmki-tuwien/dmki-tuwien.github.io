@@ -36,49 +36,8 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container">
-	  
-	<div class="d-flex align-items-center gap-2 flex-wrap">
-	  <a href="index.html" class="d-flex align-items-center" style="margin-right: -12px; text-decoration: none;">
-		<img alt="DMKI Lab Logo" src="img/dmki-logo.png" style="height: 40px;" />
-		<span class="navbar-brand mb-0 h1 ms-2">DMKI Lab</span>
-	  </a>
-	  <a href="https://www.dbai.tuwien.ac.at/" target="_blank" rel="noopener" class="p-2">
-		<img alt="DBAI Logo" src="img/dbai-logo.png" style="height: 40px;" />
-	  </a>
-	  <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank" rel="noopener" class="py-2">
-		<img alt="TUW Informatics Logo" src="img/tuinformatics-logo.svg" style="height: 40px;" />
-	  </a>
-	</div>
-
-    <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li> 
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
-		<li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>	
-	
-<!-- Hero Section -->
-<section class="hero">
-<div class="container">
-<img alt="DMKI Lab Logo" class="img-fluid mb-4" src="img/dmki-logo.png" style="max-width: 150px;"/>
-<h1 class="display-6">DMKI Lab</h1>
-<p class="lead">Data Management and Knowledge-Driven AI</p>
-</div>
-</section>
+<!-- NavBar & Hero Section-->
+<div data-include="header.html"></div>
 
 <!-- Content Section -->
 <section class="py-5" id="publications">
@@ -188,7 +147,7 @@
 <div class="ms-2 me-auto">
 		<a href="https://ernlavr.github.io/" target="_blank">E. Lavrinovics</a>, <a href="https://vbn.aau.dk/en/persons/rubi" target="_blank">R. Biswas</a>, <a href="https://vbn.aau.dk/en/persons/jbjerva" target="_blank">J. Bjerva</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
 		Knowledge Graphs, Large Language Models, and Hallucinations: An NLP Perspective<br/>
-		In: <a href=https://www.sciencedirect.com/journal/journal-of-web-semantics" target="_blank">Journal of Web Semantics,</a> Volume 85, 2025
+		In: <a href="https://www.sciencedirect.com/journal/journal-of-web-semantics" target="_blank">Journal of Web Semantics,</a> Volume 85, 2025
    </div>
 <span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1016/j.websem.2024.100844" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
 </li>
@@ -262,7 +221,7 @@
 </li>
 <li class="list-group-item d-flex justify-content-between align-items-start">
 <div class="ms-2 me-auto">
-		T. Zeimetz, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <A href="https://www.uni-trier.de/universitaet/fachbereiche-faecher/fachbereich-iv/faecher/informatikwissenschaften/professuren/datenbanken-und-informationssysteme/team/prof-dr-schenkel" target="_blank">R. Schenkel</A><br/>
+		T. Zeimetz, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://www.uni-trier.de/universitaet/fachbereiche-faecher/fachbereich-iv/faecher/informatikwissenschaften/professuren/datenbanken-und-informationssysteme/team/prof-dr-schenkel" target="_blank">R. Schenkel</a><br/>
 		ORAQL: ORAQL: An Overlap and Reliability Aware Query Processing Layer for Federations of Triple Fragment Interfaces<br/>
 		In: <a href="https://2024-eu.semantics.cc/" target="_blank">SEMANTiCS 2024</a>, pp. 328-344
     </div>
@@ -606,53 +565,10 @@
 </div>
 </section>
 	
+<!-- Contact & Footer Section-->
+<div data-include="footer.html"></div>
 	
-	
-<!-- Contact Section -->
-<section id="contact" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4">Contact</h2>
-    <p class="mb-4">Reach out to us for collaboration opportunities or student projects.</p>
-    
-    <div class="row">
-      <!-- Email Card -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Email</h5>
-            <p class="card-text">dmki [dot] tuwien [at] gmail [dot] com</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Address Card -->
-      <div class="col-md-6 mb-4">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Postal Address</h5>
-            <p class="card-text mb-0">
-              TU Wien<br>
-              Databases and Artificial Intelligence<br>
-              Favoritenstraße 9<br>
-              A-1040 Wien<br>
-              Austria
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- Footer -->
-<footer class="footer">
-<div class="container">
-<p class="mb-0">© 2025 The Data Management and Knowledge-Driven AI (DMKI) Lab. All rights reserved.</p>
-</div>
-</footer>
+<script src="scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
