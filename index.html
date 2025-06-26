@@ -95,12 +95,13 @@
               </div>
 
               <div class="col-md-4 ps-3 text-end" >
-                <img src="img/posts/2025-06-Visit_Nelly_Barret.jpg" class="img-fluid rounded" alt="Nelly Barret's Visit to TU Wien">
+                <img src="img/posts/2025-06-Visit_Nelly_Barret.jpg" class="img-fluid rounded" alt="Visit of Nelly Barret to TU Wien">
               </div>
             </div>
           </div>
         </div>
       </div>	
+
 
      <div class="col d-flex">
         <div class="card shadow-sm" style="width: 100%;">
@@ -121,7 +122,9 @@
               </div>
 
               <div class="col-md-4 ps-3 text-end" >
-                <img src="img/posts/2025-06-UPC.jpg" class="img-fluid rounded" alt="Javer Flores and his PhD examination committee">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+                  <img src="img/posts/2025-06-UPC.jpg" class="img-fluid rounded-end" alt="Javer Flores and his PhD examination committee">
+                </a>
               </div>
             </div>
           </div>
@@ -147,7 +150,9 @@
               </div>
 
               <div class="col-md-4 ps-3 text-end" >
-                <img src="img/posts/GOBLINWorkshop2025.jpg" class="img-fluid rounded" alt="1st GOBLIN Workshop on Knowledge Graph Technologies">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+                  <img src="img/posts/2025-06-GOBLINWorkshop.jpg" class="img-fluid rounded-end" alt="1st GOBLIN Workshop on Knowledge Graph Technologies">
+                </a>
               </div>
             </div>
           </div>
@@ -664,6 +669,28 @@
 
 <!-- Contact & Footer Section-->
 <div data-include="footer.html"></div>
+
+
+
+<!-- Image Modal - for clickable pictures -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <img src="" id="modalImage" class="img-fluid rounded" alt="Enlarged view">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function enlargeImage(el) {
+    const img = el.querySelector('img');
+    const modalImg = document.getElementById('modalImage');
+    modalImg.src = img.src;
+    modalImg.alt = img.alt;
+  }
+</script>
 	
 <script src="scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
