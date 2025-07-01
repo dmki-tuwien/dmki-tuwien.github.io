@@ -32,6 +32,20 @@
       height: auto;
       object-fit: contain;
     }
+	
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive */
+  gap: 12px; /* Controls the space between images */
+}
+
+.image-grid a img {
+  width: 100%; /* Same width */
+  height: auto; /* Let height follow image's aspect ratio */
+  display: block;
+  border-radius: 6px;
+  object-fit: cover; /* Optional, makes images more uniform */
+}
   </style>
 </head>
 <body>
@@ -45,17 +59,58 @@
 <h4 class="mt-4 mb-3">2025</h4>
 	
 	
+	<div class="list-group-item py-3">
+  <div class="row g-3">
+    <div class="col-md-8">
+	  <h6 class="mb-2 text-primary fw-bold">June 2025 (Event)</h6>
+      <p class="mt-4 mb-1 text-secondary">
+              The <a href="https://www.dbai.tuwien.ac.at/" target="_blank">dbai</a> team had the pleasure of attending <a href="https://2025.sigmod.org/" target="_blank">SIGMOD/PODS 2025</a> in Berlin. It was an inspiring conference filled with cutting-edge research, stimulating discussions, and valuable networking opportunities. 
+            </p>
+            <p class=" text-secondary mb-1">We were proud to present three papers at the conference:</p>
+            <ol class="text-secondary mb-3">
+              <li><strong>Towards Tractability of the Diversity of Query Answers: Ultrametrics to the Rescue</strong> – <em>Marcelo Arenas, <a href="https://informatics.tuwien.ac.at/people/timo-merkl" target="_blank">Camillo Merkl</a>, <a href="https://www.dbai.tuwien.ac.at/staff/pichler/" target="_blank">Reinhard Pichler</a>, Cristian Riveros</em></li>
+              <li><strong>Soft and Constrained Hypertree Width</strong> – <em><a href="https://informatics.tuwien.ac.at/people/matthias-lanzinger" target="_blank">Matthias Lanzinger</a>, <a href="https://www.uni-paderborn.de/person/114410" target="_blank">Cem Okulmus</a>, <a href="https://www.dbai.tuwien.ac.at/staff/pichler/" target="_blank">Reinhard Pichler</a>, Alexander Selzer, <a href="https://scholar.google.com/citations?user=i72_SkUAAAAJ" target="_blank">Georg Gottlob</a></em> </li>
+              <li><strong>Lossless Transformation of Knowledge Graphs to Property Graphs using Standardized Schemas</strong> – <em>Kashif Rabbani, <a href="https://lissandrini.com/" target="_blank">M. Lissandrini</a>, <a href="https://perso.liris.cnrs.fr/angela.bonifati/" target="_blank">Angela Bonifati</a>, <a href="http://katja-hose.de" target="_blank">Katja Hose</a></em> [<a href="https://doi.org/10.1145/3698817">link</a>]</li>
+            </ol>
+            <p class="text-secondary">Below are a few impressions from our time at the event:</p>
+	      </div>
+	  	<div class="col-md-4" style="margin-top: 60px">
+         <div class="image-grid">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+              <img src="img/posts/2025-06-SIGMOD-1.jpg" class="img-thumbnail" style="max-width: 120px;" alt="Group photo">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+              <img src="img/posts/2025-06-SIGMOD-2.jpg" class="img-thumbnail" style="max-width: 120px;" alt="Camillo Merkl">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+              <img src="img/posts/2025-06-SIGMOD-3.jpg" class="img-thumbnail" style="max-width: 120px;" alt="Matthias Lanzinger">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+              <img src="img/posts/2025-06-25-SIGMOD-poster.jpg" class="img-thumbnail" style="max-width: 120px;" alt="Matteo Lissandrini and Katja Hose">
+            </a>
+            <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+              <img src="img/posts/2025-06-SIGMOD-MPI-Alumni.jpg" class="img-thumbnail" style="max-width: 120px;" alt="MPI Alumni at SIGMOD 2025">
+            </a>
+		</div>
+	  </div>
+  </div>
+</div>
+	
+	
 <div class="list-group-item py-3">
   <div class="row g-3">
     <div class="col-md-10">
 	  <h6 class="mb-2 text-primary fw-bold">June 2025 (Visit)</h6>
       <p class="mt-4 mb-1 text-secondary">
-		We were pleased to welcome <a href="https://nelly-barret.github.io/index.html" target="_blank"> Nelly Barret</a> from <a href="https://www.polimi.it/en" target="_blank">Politecnico di Milano</a> to TU Wien during her visit to Vienna for the <a href="https://conferences.big.tuwien.ac.at/caise2025/" target="_blank">CAiSE 2025 conference</a>. It was a great opportunity to connect, exchange insights and explore new perspectives.
+		  We had the pleasure of welcoming <a href="https://nelly-barret.github.io/index.html" target="_blank"> Nelly Barret</a> from a <a href="https://www.polimi.it/en" target="_blank">Politecnico di Milano</a> during her visit to Vienna for the <a href="https://conferences.big.tuwien.ac.at/caise2025/" target="_blank">CAiSE 2025 conference</a>. <br> 
+          Her stop at TU Wien was a wonderful opportunity to exchange ideas and engage in insightful discussion.
       </p>
-    </div>
-    <div class="col-md-2 mt-4 text-end">
-      <img src="img/posts/2025-06-Visit_Nelly_Barret.jpg" alt="Nelly Barret's Visit to TU Wien" class="img-fluid rounded" style="max-height: 160px;" />
-    </div>
+		</div>
+		  <div class="col-md-2 mt-4 text-end" >
+			<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+			  <img src="img/posts/2025-06-Visit_Nelly_Barret.jpg" class="img-thumbnail" alt="Visit of Nelly Barret to TU Wien">
+			</a>
+		  </div>
   </div>
 </div>
 	
@@ -68,9 +123,13 @@
 		    Congratulations to Dr. Javier Flores on this significant achievement!
       </p>
     </div>
-    <div class="col-md-2 mt-4 text-end">
-      <img src="img/posts/2025-06-UPC.jpg" alt="Javer Flores and his PhD examination committee" class="img-fluid rounded" style="max-height: 160px;" />
-    </div>
+	  
+	  <div class="col-md-2 mt-4 text-end" >
+		<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+		  <img src="img/posts/2025-06-UPC.jpg" class="img-thumbnail" alt="Javer Flores and his PhD examination committee">
+		</a>
+	  </div>
+	  
   </div>
 </div>
 
@@ -82,9 +141,13 @@
 		  <a href="https://www.mjakubowski.info/" target="_blank">Maxime Jakubowski</a> presented our work on "Towards Generating Synthetic EHR Knowledge Graphs — a Probabilistic Approach" at the <a href="https://www.dbpedia.org/events/goblin25-workshop/" target="_blank">GOBLIN Workshop 2025</a> in Leipzig, Germany, authors: <a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, E. Milenkova, <a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, and <a href="http://katja-hose.de" target="_blank">K. Hose</a> (<a href="https://www.researchgate.net/publication/392605572_Towards_Generating_Synthetic_EHR_Knowledge_Graphs_-_a_Probabilistic_Approach" target="_blank">paper</a>)
       </p>
     </div>
-    <div class="col-md-2 text-end">
-      <img src="img/posts/GOBLINWorkshop2025.jpg" alt="1st GOBLIN Workshop on Knowledge Graph Technologies" class="img-fluid rounded" style="max-height: 160px;" />
-    </div>
+	  
+	  <div class="col-md-2 mt-4 text-end" >
+		<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+		  <img src="img/posts/2025-06-GOBLINWorkshop.jpg" class="img-thumbnail" alt="1st GOBLIN Workshop on Knowledge Graph Technologies">
+		</a>
+	  </div>
+	
   </div>
 </div>
 
@@ -108,9 +171,13 @@
         The award was given for their paper <em>“Extraction of Validating Shapes from Very Large Knowledge Graphs”</em> published in <a href="https://vldb.org/2023/" target="_blank">VLDB 2023</a> (<a href="https://www.vldb.org/pvldb/vol16/p1023-rabbani.pdf" target="_blank">pdf</a>).
       </p>
     </div>
-    <div class="col-md-2 text-end">
-      <img src="img/posts/IFIPTC2Award.png" alt="IFIP TC2 Award" class="img-fluid rounded" style="max-height: 160px;" />
-    </div>
+	  
+	  <div class="col-md-2 mt-4 text-end" >
+		<a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
+		  <img src="img/posts/2025-06-IFIP-TC2-Award.png" class="img-thumbnail" alt="IFIP TC2 Award" style="max-height: 160px;">
+		</a>
+	  </div>
+	  
   </div>
 </div>
 
@@ -380,6 +447,18 @@
 </div>
 </div>
 </section>
+	
+<!-- Image Modal - for clickable pictures -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content bg-transparent border-0">
+      <div class="modal-body p-0">
+        <img src="" id="modalImage" class="img-fluid rounded" alt="Enlarged view">
+      </div>
+    </div>
+  </div>
+</div>
+	
 <footer class="footer">
 <div class="container">
 <p class="mb-0">© 2025 The Data Management and Knowledge-Driven AI (DMKI) Lab. All rights reserved.</p>
