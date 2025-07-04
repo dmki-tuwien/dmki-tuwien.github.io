@@ -32,20 +32,45 @@
       height: auto;
       object-fit: contain;
     }
-	
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive */
-  gap: 12px; /* Controls the space between images */
-}
+    .card-title {
+      font-weight: 600;
+    }
+    .card-img-top {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-.image-grid a img {
-  width: 100%; /* Same width */
-  height: auto; /* Let height follow image's aspect ratio */
-  display: block;
-  border-radius: 6px;
-  object-fit: cover; /* Optional, makes images more uniform */
-}
+    .card-body .card-text {
+      flex-grow: 1;
+    }
+
+    .card-body .btn-group {
+      margin-top: 1rem;
+    }
+      
+      .badge-purple {
+        background-color:#6610f2; 
+      color:white;
+      }
+      
+      .badge-red {
+      background-color:#e74c3c; 
+      color:white;
+      }
+      
+    .img-thumbnail {
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .img-thumbnail:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -108,6 +133,36 @@
 	
     <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center" >
 
+
+      <div class="col d-flex">
+        <div class="card shadow-sm" style="width: 100%;">
+          <div class="card-body">
+            <h5 class="card-title d-flex justify-content-between align-items-center">
+              Paper accepted at the QDB'25 Workshop at VLDB
+              <span class="badge bg-warning text-dark">Publication</span>
+            </h5>
+            <div class="card-text">
+              <p>
+              The paper "Dynamic Knowledge Graph-based Measurement of Data Quality",
+              written by <a href="https://johannes.schrott.onl">Johannes Schrott</a>,
+              <a href="https://www.scch.at/team/rainer.meindl">Rainer Meindl</a>,
+              <a href="https://www.scch.at/team/christian.lettner">Christian Lettner</a>,
+              Stefan Hammer, and Magdalena Leitner,
+              has been accepted at the
+              <a href="https://qdb-workshop.github.io">QDB’25 workshop</a>,
+              which takes place as part of the <a href="https://vldb.org/2025/">51st VLDB conference</a>.</p>
+
+              <p>
+                The paper introduces a novel method that enables the dynamic knowledge graph-based
+                parameterization of data quality metric definitions.
+              </p>
+            </div>
+            <p class="text-muted mb-0"><small>June 2025</small></p>
+          </div>
+        </div>
+      </div>
+
+
       <div class="col d-flex">
         <div class="card shadow-sm" style="width: 100%;">
           <div class="card-body">
@@ -127,7 +182,8 @@
           </div>
         </div>
       </div>
-	
+	    
+    
     <div class="col d-flex">
       <div class="card shadow-sm" style="width: 100%;">
         <div class="card-body">
@@ -185,19 +241,19 @@
                 <p class="text-muted mb-0"><small>June 2025</small></p>
 
               </div>
-				
-			  <div class="col-md-4 ps-3 text-end" >
+        
+        <div class="col-md-4 ps-3 text-end" >
                 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
                   <img src="img/posts/2025-06-Visit_Nelly_Barret.jpg" class="img-thumbnail" alt="Visit of Nelly Barret to TU Wien">
                 </a>
               </div>
-				
+        
             </div>
           </div>
         </div>
       </div>  
-	  
-	  
+    
+    
      <div class="col d-flex">
         <div class="card shadow-sm" style="width: 100%;">
           <div class="card-body">
@@ -208,9 +264,9 @@
               </h5>
               <div class="col-md-8 d-flex flex-column">
                 <p>
-					We’re pleased to share that <a href="http://katja-hose.de" target="_blank">Katja Hose</a> served on the examination committee for the PhD defense of <a href="https://www.linkedin.com/in/javier-flores-herrera/" target="_blank">Javier Flores</a> at the Universitat Politècnica de Catalunya (UPC) in Barcelona. <br>
-					Javier’s dissertation was supervised by <a href="https://serginf.github.io/" target="_blank">Sergi Nadal</a> and <a href="https://imp.upc.edu/en/members/oscar-romero" target="_blank">Oscar Romero</a>.<br>
-					Congratulations to Dr. Javier Flores on this significant achievement!
+          We’re pleased to share that <a href="http://katja-hose.de" target="_blank">Katja Hose</a> served on the examination committee for the PhD defense of <a href="https://www.linkedin.com/in/javier-flores-herrera/" target="_blank">Javier Flores</a> at the Universitat Politècnica de Catalunya (UPC) in Barcelona. <br>
+          Javier’s dissertation was supervised by <a href="https://serginf.github.io/" target="_blank">Sergi Nadal</a> and <a href="https://imp.upc.edu/en/members/oscar-romero" target="_blank">Oscar Romero</a>.<br>
+          Congratulations to Dr. Javier Flores on this significant achievement!
                  </p>
                 <p class="text-muted mb-0"><small>June 2025</small></p>
 
@@ -227,7 +283,7 @@
       </div>
 
 
-	   <div class="col d-flex">
+     <div class="col d-flex">
         <div class="card shadow-sm" style="width: 100%;">
           <div class="card-body">
             <div class="row g-0">
@@ -237,7 +293,7 @@
               </h5>
               <div class="col-md-8 d-flex flex-column">
                 <p>
-				  <a href="https://www.mjakubowski.info/" target="_blank">Maxime Jakubowski</a> presented our work on "Towards Generating Synthetic EHR Knowledge Graphs — a Probabilistic Approach" at the <a href="https://www.dbpedia.org/events/goblin25-workshop/" target="_blank">GOBLIN Workshop 2025</a> in Leipzig, Germany, authors: <a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, E. Milenkova, <a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, and <a href="http://katja-hose.de" target="_blank">K. Hose</a> (<a href="https://www.researchgate.net/publication/392605572_Towards_Generating_Synthetic_EHR_Knowledge_Graphs_-_a_Probabilistic_Approach" target="_blank">paper</a>)
+          <a href="https://www.mjakubowski.info/" target="_blank">Maxime Jakubowski</a> presented our work on "Towards Generating Synthetic EHR Knowledge Graphs — a Probabilistic Approach" at the <a href="https://www.dbpedia.org/events/goblin25-workshop/" target="_blank">GOBLIN Workshop 2025</a> in Leipzig, Germany, authors: <a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, E. Milenkova, <a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, and <a href="http://katja-hose.de" target="_blank">K. Hose</a> (<a href="https://www.researchgate.net/publication/392605572_Towards_Generating_Synthetic_EHR_Knowledge_Graphs_-_a_Probabilistic_Approach" target="_blank">paper</a>)
                  </p>
                 <p class="text-muted mb-0"><small>June 2025</small></p>
 
@@ -253,7 +309,7 @@
         </div>
       </div>
 
-		
+    
     <div class="col d-flex">
       <div class="card shadow-sm" style="width: 100%;">
         <div class="card-body">
@@ -285,14 +341,14 @@
                 <p>
                   Kashif Rabbani, <a href="https://lissandrini.com/" target="_blank">Matteo Lissandrini</a>, and <a href="http://katja-hose.de" target="_blank">Katja Hose</a> received the IFIP TC2 Manfred Paul Award for Excellence in Software: Theory and Practice.
                  </p>
-				<p class="card-text">
+        <p class="card-text">
                   The award was given for their paper <em>“Extraction of Validating Shapes from Very Large Knowledge Graphs”</em> published in <a href="https://vldb.org/2023/" target="_blank">VLDB 2023</a> (<a href="https://www.vldb.org/pvldb/vol16/p1023-rabbani.pdf" target="_blank">pdf</a>).
                 </p>
                 <p class="text-muted mb-0"><small>June 2025</small></p>
 
               </div>
 
-			 <div class="col-md-4 ps-3 text-end" >
+       <div class="col-md-4 ps-3 text-end" >
                 <a href="#" data-bs-toggle="modal" data-bs-target="#imageModal" onclick="enlargeImage(this)">
                   <img src="img/posts/2025-06-IFIP-TC2-Award.png" class="img-thumbnail" alt="IFIP Award Certificate">
                 </a>
@@ -302,7 +358,7 @@
         </div>
       </div>
 
-	   <div class="col d-flex">
+     <div class="col d-flex">
         <div class="card shadow-sm" style="width: 100%;">
           <div class="card-body">
             <h5 class="card-title d-flex justify-content-between align-items-center">
@@ -548,7 +604,7 @@
           <div class="card-body">
             <h5 class="card-title d-flex justify-content-between align-items-center">
               Paper Presented at EDBT 2025
-			  <span class="badge bg-info text-dark">Presentation</span>
+        <span class="badge bg-info text-dark">Presentation</span>
             </h5>
             <p class="card-text">
               Davide and Matteo presented our work "Towards Reliable Conversational Data Analytics" at <a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a>. Authors include <a href="https://lig-membres.imag.fr/amery/" target="_blank">S. Amer-Yahia</a>, <a href="https://www.zhaw.ch/de/ueber-uns/person/bogo" target="_blank">J. Bogojeska</a>, R. Facchinetti, V. Franceschi, <a href="https://www.kth.se/profile/argioni" target="_blank">A. Gionis</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://web.imsi.athenarc.gr/~georgia/" target="_blank">G. Koutrika</a>, R. Kouyos, <a href="https://lissandrini.com/" target="_blank">M. Lissandrini</a>, <a href="https://silviu.maniu.info/" target="_blank">S. Maniu</a>, K. Mirylenka, <a href="https://mott.in/" target="_blank">D. Mottin</a>, <a href="https://helios2.mi.parisdescartes.fr/~themisp/" target="_blank">T. Palpanas</a>, M. Rigotti, and <a href="https://velgias.github.io/" target="_blank">Y. Velegrakis</a>.
@@ -593,7 +649,7 @@
           <div class="card-body">
             <h5 class="card-title d-flex justify-content-between align-items-center">
               Paper Accepted at the Web Conference 2025
-			  <span class="badge bg-warning text-dark">Publication</span>
+        <span class="badge bg-warning text-dark">Publication</span>
             </h5>
             <p class="card-text">
               The paper "Common Foundations of SHACL, ShEx, and PG-Schema" has been accepted at <a href="https://www2025.thewebconf.org/" target="_blank">The Web Conference 2025</a>. Authors: S. Ahmetaj, I. Boneva, J. Hidders, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, J.E.L. Gayo, W. Martens, F. Mogavero, F. Murlak, C. Okulmus, A. Polleres, O. Savkovic, M. Simkus, <a href="https://scholar.google.pl/citations?user=jOzcaXoAAAAJ" target="_blank">D. Tomaszuk</a>.
