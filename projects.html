@@ -29,13 +29,40 @@
     }
     .navbar img {
       max-height: 40px;
-      height: auto;
       object-fit: contain;
     }
-    .team-photo {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
+    .card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .card-logo-wrapper {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background-color: #fff;
+    }
+    .card-logo-wrapper img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      padding: 1rem;
+    }
+    .card-title {
+      margin-bottom: 0.75rem;
+    }
+    .card-text {
+      margin-bottom: 1rem;
+    }
+    .card-body a.btn {
+      margin-top: auto;
     }
   </style>
 </head>
@@ -67,8 +94,8 @@
         <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li> 
         <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="projects.html">Projects</a></li>
 		<li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
@@ -83,26 +110,26 @@
 <section id="projects">
 
   <div class="container my-5 px-5">
-    <h1 class="text-center">Ongoing Projects</h1>
+    <h1 class="text-center">Ongoing Projects and Initiatives</h1>
 
     <!-- Ongoing Projects -->
-
       <div class="row row-cols-1 row-cols-md-3 g-4">
 		  
       <!-- ARMADA Project -->
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://armada-dn.eu/" target="_blank" rel="noopener">
-            <img src="img/armada-logo.png" class="card-img-top p-4" alt="ARMADA Logo" style="height: 150px; object-fit: contain;">
-          </a>
+          <div class="card-logo-wrapper"><a href="https://armada-dn.eu/" rel="noopener" target="_blank">
+            <img alt="ARMADA Logo" class="card-img-top p-4" src="img/armada-logo.png" style="height: 150px; object-fit: contain;"/>
+          </a></div>
           <div class="card-body">
             <h5 class="card-title">ARMADA</h5>
             <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Reliable Conversational Domain-specific Data Exploration and Analysis<br>
+              <strong>Full Title:</strong> Reliable Conversational Domain-specific Data Exploration and Analysis<br/>
+              <strong>Period:</strong> 2025-2029<br/>
               <strong>Funding:</strong> Horizon Europe MSCA DN (Grant Agreement No. 101168951)
             </p>
-            <a href="https://armada-dn.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-<!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://armada-dn.eu/" rel="noopener" target="_blank">Learn More</a>
+            <!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
           </div>
         </div>
       </div>
@@ -110,17 +137,18 @@
       <!-- TARGET Project -->
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://target-horizon.eu/" target="_blank" rel="noopener">
-            <img src="img/target-logo.jpg" class="card-img-top p-4" alt="TARGET Logo" style="height: 150px; object-fit: contain;">
-          </a>
+          <div class="card-logo-wrapper"><a href="https://target-horizon.eu/" rel="noopener" target="_blank">
+            <img alt="TARGET Logo" class="card-img-top p-4" src="img/target-logo.jpg" style="height: 150px; object-fit: contain;"/>
+          </a></div>
           <div class="card-body">
             <h5 class="card-title">TARGET</h5>
             <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Health Virtual Twins for the Personalised Management of Stroke Related to Atrial Fibrillation<br>
+              <strong>Full Title:</strong> Health Virtual Twins for the Personalised Management of Stroke Related to Atrial Fibrillation<br/>
+              <strong>Period:</strong> 2024-2028<br/>
               <strong>Funding:</strong> Horizon Europe (Grant Agreement No. 101136244)
             </p>
-            <a href="https://target-horizon.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-<!--            <a href="https://cordis.europa.eu/project/id/101136244" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://target-horizon.eu/" rel="noopener" target="_blank">Learn More</a>
+            <!--            <a href="https://cordis.europa.eu/project/id/101136244" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
           </div>
         </div>
       </div>
@@ -128,17 +156,18 @@
       <!-- ARISTOTELES Project -->
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://aristoteles-horizon.eu/" target="_blank" rel="noopener">
-            <img src="img/aristoteles-logo.jpg" class="card-img-top p-4" alt="ARISTOTELES Logo" style="height: 150px; object-fit: contain;">
-          </a>
+          <div class="card-logo-wrapper"><a href="https://aristoteles-horizon.eu/" rel="noopener" target="_blank">
+            <img alt="ARISTOTELES Logo" class="card-img-top p-4" src="img/aristoteles-logo.jpg" style="height: 150px; object-fit: contain;"/>
+          </a></div>
           <div class="card-body">
             <h5 class="card-title">ARISTOTELES</h5>
             <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Applying Artificial Intelligence to Define Clinical Trajectories for Personalized Prediction and Early Detection of Comorbidity and Multimorbidity Patterns<br>
+              <strong>Full Title:</strong> Applying Artificial Intelligence to Define Clinical Trajectories for Personalized Prediction and Early Detection of Comorbidity and Multimorbidity Patterns<br/>
+              <strong>Period:</strong> 2024-2028<br/>
               <strong>Funding:</strong> Horizon Europe (Grant Agreement No. 101080189)
             </p>
-            <a href="https://aristoteles-horizon.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-<!--            <a href="https://cordis.europa.eu/project/id/101080189" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://aristoteles-horizon.eu/" rel="noopener" target="_blank">Learn More</a>
+            <!--            <a href="https://cordis.europa.eu/project/id/101080189" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
           </div>
         </div>
       </div>
@@ -146,61 +175,158 @@
       <!-- GOBLIN COST Action -->
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
-            <img src="img/cost-logo.png" alt="COST Logo" style="height: 100px; object-fit: contain;">
-          </a>
-          <!--<div class="d-flex justify-content-center align-items-center p-4 gap-3">
-            <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
-              <img src="img/goblin-logo.png" alt="GOBLIN Logo" style="height: 100px; object-fit: contain;">
-            </a>
-            <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
-              <img src="img/cost-logo.png" alt="COST Logo" style="height: 100px; object-fit: contain;">
-            </a>
-          </div>-->
+          <div class="card-logo-wrapper"><a href="https://www.cost.eu/actions/CA23147/" rel="noopener" target="_blank">
+            <img alt="COST Logo" src="img/cost-logo.png" style="height: 100px; object-fit: contain;"/>
+          </a></div>
+                <!--<div class="d-flex justify-content-center align-items-center p-4 gap-3">
+                  <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
+                    <img src="img/goblin-logo.png" alt="GOBLIN Logo" style="height: 100px; object-fit: contain;">
+                  </a>
+                  <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
+                    <img src="img/cost-logo.png" alt="COST Logo" style="height: 100px; object-fit: contain;">
+                  </a>
+                </div>-->
           <div class="card-body">
             <h5 class="card-title">GOBLIN</h5>
             <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Global Network on Large-Scale, Cross-domain and Multilingual Open Knowledge Graphs (GOBLIN) <br>
+              <strong>Full Title:</strong> Global Network on Large-Scale, Cross-domain and Multilingual Open Knowledge Graphs (GOBLIN) <br/>
+              <strong>Period:</strong> 2024-2028<br/>
               <strong>Funding:</strong> COST (European Cooperation in Science and Technology) (CA23147)
             </p>
-            <a href="https://www.cost.eu/actions/CA23147/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://www.cost.eu/actions/CA23147/" rel="noopener" target="_blank">Learn More</a>
           </div>
         </div>
-      </div>	  
+      </div>
 		  
 		  
-		<!-- Add more project cards as needed -->
-	</section>
-	  
-    <!-- Completed Projects -->
-    <section class="mb-5">
-<!--      <h2>Current Team</h2> -->
-      <h1 class="text-center">Completed Projects</h1>
+      <!-- DarkScience Project -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-logo-wrapper"><a href="https://vbn.aau.dk/da/projects/illuminating-microbial-dark-matter-through-data-science" rel="noopener" target="_blank">
+            <img alt="Villum Fonden Logo" class="card-img-top p-4" src="img/villum-logo.jpg" style="height: 150px; object-fit: contain;"/>
+          </a></div>
+          <div class="card-body">
+            <h5 class="card-title">DarkScience</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> Illuminating microbial dark matter through data science (DarkScience)<br/>
+              <strong>Period:</strong> 2022-2027<br/>
+              <strong>Funding:</strong> Villum Fonden
+            </p>
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://vbn.aau.dk/da/projects/illuminating-microbial-dark-matter-through-data-science" rel="noopener" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+		  
+		  
+      <!-- Poul Due Jensen Project -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-logo-wrapper"><a href="https://vbn.aau.dk/en/projects/poul-due-jensen-professorate-in-big-data-and-artificial-intellige" rel="noopener" target="_blank">
+            <img alt="Grundfos Fonden Logo" class="card-img-top p-4" src="img/grundfos-logo.jpg" style="height: 150px; object-fit: contain;"/>
+          </a></div>
+          <div class="card-body">
+            <h5 class="card-title">DarkScience</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> Big Data and Artificial Intelligence<br/>
+              <strong>Period:</strong> 2019-2025<br/>
+              <strong>Funding:</strong> Grundfos Foundation
+            </p>
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://vbn.aau.dk/en/projects/poul-due-jensen-professorate-in-big-data-and-artificial-intellige" rel="noopener" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+
+<!-- Add more project cards as needed -->
+</div></div></section>
+
+
+
+		  
+<!-- Completed Projects -->
+<section class="mb-5">
 		
-	  <div class="row row-cols-1 row-cols-md-3 g-4">
-		  <!-- GOBLIN COST Action -->
-		  <div class="col">
-			<div class="card h-100 text-center border-0 shadow-sm">
-			  <a href="https://cost-dkg.eu/" target="_blank" rel="noopener">
-				<img src="img/cost-logo.png" alt="COST Logo" style="height: 100px; object-fit: contain;">
-			  </a>
-			  <div class="card-body">
-				<h5 class="card-title">DKG</h5>
-				<p class="card-text text-muted small">
-				  <strong>Full Title:</strong> Distributed Knowledge Graphs (DKG) <br>
-				  <strong>Funding:</strong> COST (European Cooperation in Science and Technology) (CA19134)
-				</p>
-				<a href="https://www.cost.eu/actions/CA19134/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-			  </div>
-			</div>
-		  </div>
-	  </div>
+  <div class="container my-5 px-5">
 
-  	</section>
+      <h1 class="text-center">Completed Projects and Initiatives</h1>
+		
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+		  
+      <!-- RelWeb Project -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-logo-wrapper"><a href="https://relweb.cs.aau.dk/" rel="noopener" target="_blank">
+            <img alt="DFF Logo" class="card-img-top p-4" src="img/dff-logo.png" style="height: 150px; object-fit: contain;"/>
+          </a></div>
+          <div class="card-body">
+            <h5 class="card-title">RelWeb</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> A Reliable Web of Data (RelWeb)<br/>
+              <strong>Period:</strong> 2019-2024<br/>
+              <strong>Funding:</strong> Independent Research Fund Denmark - Sapere Aude Research Leader
+            </p>
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://relweb.cs.aau.dk/" rel="noopener" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+		  
+      <!-- GOBLIN COST Action -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-logo-wrapper"><a href="https://cost-dkg.eu/" rel="noopener" target="_blank">
+            <img alt="COST Logo" src="img/cost-logo.png" style="height: 100px; object-fit: contain;"/>
+          </a></div>
+          <div class="card-body">
+            <h5 class="card-title">DKG</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> Distributed Knowledge Graphs (DKG) <br/>
+              <strong>Period:</strong> 2020-2024<br/>
+              <strong>Funding:</strong> COST (European Cooperation in Science and Technology) (CA19134)
+            </p>
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://www.cost.eu/actions/CA19134/" rel="noopener" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>	
 
-  </div>
-	
-</section>
+      <!-- DarkScience Project -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-logo-wrapper"><a href="https://vbn.aau.dk/en/projects/data-science-meets-microbial-dark-matter" rel="noopener" target="_blank">
+            <img alt="Villum Fonden Logo" class="card-img-top p-4" src="img/villum-logo.jpg" style="height: 150px; object-fit: contain;"/>
+          </a></div>
+          <div class="card-body">
+            <h5 class="card-title">DarkMatter</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> Data Science meets Microbial Dark Mattere (DarkMatter)<br/>
+              <strong>Period:</strong> 2021-2023<br/>
+              <strong>Funding:</strong> Villum Fonden
+            </p>
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://vbn.aau.dk/en/projects/data-science-meets-microbial-dark-matter" rel="noopener" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+		  
+      <!-- DREAMS Project -->
+      <div class="col">
+        <div class="card h-100 text-center border-0 shadow-sm">
+          <div class="card-logo-wrapper"><a href="https://dreamsproject.dk/" rel="noopener" target="_blank">
+            <img alt="Villum Fonden Logo" class="card-img-top p-4" src="img/innovationFund-logo.png" style="height: 150px; object-fit: contain;"/>
+          </a></div>
+          <div class="card-body">
+            <h5 class="card-title">DREAMS</h5>
+            <p class="card-text text-muted small">
+              <strong>Full Title:</strong> Digitally supported Environmental Assessment for Sustainable Development Goals (DREAMS)<br/>
+              <strong>Period:</strong> 2020-2023<br/>
+              <strong>Funding:</strong> Innovation Fund Denmark
+            </p>
+            <a class="btn btn-outline-primary btn-sm me-2" href="https://dreamsproject.dk/" rel="noopener" target="_blank">Learn More</a>
+          </div>
+        </div>
+      </div>
+		  
+		  
+</div></div></section>
+
 	
 <!-- Contact & Footer Section-->
 <div data-include="footer.html"></div>
