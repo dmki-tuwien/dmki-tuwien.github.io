@@ -123,12 +123,33 @@
   </div>
 </section>
 
+  <!-- News Section (iframe) -->
+  <section id="news" class="py-14 border-b">
+    <div class="container">
+    <!--<div class="mx-auto max-w-6xl px-4">-->
+      <!--<h2 class="text-2xl font-semibold">News</h2>-->
+      <h2>Latest News</h2>
+      <iframe
+        src="https://dmki-tuwien.github.io/news-2025.html"
+        title="DMKI latest news"
+        loading="lazy"
+        class="w-full border-0 mt-6 rounded-2xl ring-1 ring-slate-200"
+        style="height: 620px;"
+        width="100%"
+        referrerpolicy="no-referrer"
+        sandbox="allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+      ></iframe>
+      <p class="text-sm text-slate-600 mt-3">
+        More on <a class="underline decoration-slate-300 hover:decoration-slate-700" href="https://dmki-tuwien.github.io/news_full.html">DMKI News</a>.
+      </p>
+    </div>
+  </section>
+
 <!-- News Section -->
-<section id="news" class="py-4">
+<!--<section id="news" class="py-4">
   <div class="container">
     <h2>Latest News</h2>
 
-	<!-- news 2025-->
 	<div data-include="news-2025.html"></div>
 
     <div class="mt-5 d-flex justify-content-center">
@@ -136,7 +157,7 @@
     </div>
 
   </div>
-</section>
+</section>-->
 
 
 <!-- Team Section -->
@@ -148,7 +169,7 @@
       <!-- Katja Hose -->
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm">
-          <img src="img/katjahose.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Katja Hose" style="width: 200px; height: 200px; object-fit: cover; object-position: center top;">
+          <img src="img/katjahose.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Katja Hose" style="width: 150px; height: 150px; object-fit: cover; object-position: center top;">
           <div class="card-body">
             <h5 class="card-title">Prof. Dr.-Ing. Katja Hose</h5>
             <p class="card-text text-muted">Research Lead</p>
@@ -160,7 +181,7 @@
       <!-- Maxime Jakubowski -->
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm">
-          <img src="img/maximejakubowski.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Maxime Jakubowski" style="width: 200px; height: 200px; object-fit: cover; object-position: center 30%;">
+          <img src="img/maximejakubowski.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Maxime Jakubowski" style="width: 150px; height: 150px; object-fit: cover; object-position: center 30%;">
           <div class="card-body">
             <h5 class="card-title">Dr. Maxime Jakubowski</h5>
             <p class="card-text text-muted">Postdoctoral Researcher</p>
@@ -172,7 +193,7 @@
       <!-- Milos Jovanovik -->
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm">
-          <img src="img/milosjovanovik.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Milos Jovanovik" style="width: 200px; height: 200px; object-fit: cover; object-position: center 20%;">
+          <img src="img/milosjovanovik.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Milos Jovanovik" style="width: 150px; height: 150px; object-fit: cover; object-position: center 20%;">
           <div class="card-body">
             <h5 class="card-title">Dr. Milos Jovanovik</h5>
             <p class="card-text text-muted">Postdoctoral Researcher</p>
@@ -184,7 +205,7 @@
 <!-- Koumudi Ganepola -->
 <div class="col">
   <div class="card h-100 shadow-sm border-0">
-    <img src="img/koumudiganepola.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Koumudi Ganepola" style="width: 200px; height: 200px; object-fit: cover; object-position: center 25%;">
+    <img src="img/koumudiganepola.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Koumudi Ganepola" style="width: 150px; height: 150px; object-fit: cover; object-position: center 25%;">
     <div class="card-body text-center">
       <h5 class="card-title">MSc Koumudi Ganepola</h5>
       <p class="card-text text-muted">PhD Student</p>
@@ -196,7 +217,7 @@
 <!-- Johannes Schrott -->
 <div class="col">
   <div class="card h-100 shadow-sm border-0">
-    <img src="img/johannesschrott.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Johannes Schrott" style="width: 200px; height: 200px; object-fit: cover;">
+    <img src="img/johannesschrott.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Johannes Schrott" style="width: 150px; height: 150px; object-fit: cover;">
     <div class="card-body text-center">
       <h5 class="card-title">DI Johannes Schrott</h5>
       <p class="card-text text-muted">PhD Student</p>
@@ -214,7 +235,7 @@
 <section id="projects" class="py-5 bg-white">
   <div class="container">
     <h2 class="mb-5 text-center">Projects and Initiatives</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
 
       <!-- ARMADA Project -->
       <div class="col">
@@ -274,7 +295,7 @@
       <div class="col">
         <div class="card h-100 text-center border-0 shadow-sm">
           <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
-            <img src="img/cost-logo.png" alt="COST Logo" style="height: 100px; object-fit: contain;">
+            <img src="img/cost-logo.png" alt="COST Logo" style="height: 150px; object-fit: contain;">
           </a>
           <!--<div class="d-flex justify-content-center align-items-center p-4 gap-3">
             <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
