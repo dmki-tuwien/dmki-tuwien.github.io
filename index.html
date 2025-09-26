@@ -369,5 +369,23 @@
 	
 <script src="scripts.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Works with your current onclick="enlargeImage(this)" in news-2025.html
+  function enlargeImage(anchorEl) {
+    const img = anchorEl.querySelector('img');
+    const fullSrc = img?.dataset.full || img?.src; // fallback just in case
+    const modalImg = document.getElementById('modalImage');
+
+    // Clear previous (prevents flashes of old image if opening quickly)
+    modalImg.removeAttribute('src');
+
+    // Optional: preserve alt text
+    if (img && img.alt) modalImg.alt = img.alt + ' (full size)';
+
+    // Set full-size image
+    // Small async gives the modal time to open before loading the big file
+    setTimeout(() => { modalImg.src = fullSrc; }, 0);
+  }
+</script>
 </body>
 </html>
