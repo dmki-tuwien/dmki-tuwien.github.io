@@ -1,0 +1,10 @@
+magick "2025-09-25-Antheas.jpg" -thumbnail 400x -quality 75 "thumbs/2025-09-25-Antheas-thumb.jpg"
+
+mkdir -p img/thumbs
+for f in img/posts/*.{jpg,jpeg,png}; do
+  [ -e "$f" ] || continue
+  base=$(basename "$f")
+  name="${base%.*}"
+  ext="${base##*.}"
+  convert "$f" -thumbnail 400x -quality 75 "img/thumbs/${name}-thumb.${ext}"
+done
