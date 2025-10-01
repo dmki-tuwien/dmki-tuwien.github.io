@@ -34,12 +34,21 @@ function includeHTML() {
 }
 
 
-function enlargeImage(el) {
-    const img = el.querySelector('img');
+function enlargeImage(anchorEl) {
+    const img = anchorEl.querySelector('img');
+    const fullSrc = img?.dataset.full || img?.src; // fallback just in case
     const modalImg = document.getElementById('modalImage');
-    modalImg.src = img.src;
-    modalImg.alt = img.alt;
-}
+
+    // Clear previous (prevents flashes of old image if opening quickly)
+    modalImg.removeAttribute('src');
+
+    // Optional: preserve alt text
+    if (img && img.alt) modalImg.alt = img.alt + ' (full size)';
+
+    // Set full-size image
+    // Small async gives the modal time to open before loading the big file
+    setTimeout(() => { modalImg.src = fullSrc; }, 0);
+  }
 
 document.addEventListener('DOMContentLoaded', includeHTML);
 document.addEventListener('enlargeImage', enlargeImage);
