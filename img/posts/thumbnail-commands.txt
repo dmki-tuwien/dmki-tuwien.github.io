@@ -6,5 +6,5 @@ for f in img/posts/*.{jpg,jpeg,png}; do
   base=$(basename "$f")
   name="${base%.*}"
   ext="${base##*.}"
-  convert "$f" -thumbnail 400x -quality 75 -colorspace sRGB -auto-gamma "img/posts/thumbs/${name}-thumb.${ext}"
+  magick convert "$f" -thumbnail 400x -quality 75 -strip -gamma 1.2 -brightness-contrast 0x30 -modulate 100,180,100 "img/posts/thumbs/${name}-thumb.${ext}"
 done
