@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>DMKI Lab - Publications</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="favicon.ico" rel="icon"/>
-<style>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>DMKI Lab - Publications</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="favicon.ico" rel="icon">
+    <style>
     body {
       font-family: 'Segoe UI', sans-serif;
     }
@@ -39,693 +39,836 @@
       height: auto;
       object-fit: contain;
     }
+
+    /* --- Academic publications list (DMKI) --- */
+    .pub-year {
+      margin-top: 2.25rem;
+      padding-bottom: 0.35rem;
+      font-weight: 600;
+      color: #0f172a;
+      border-bottom: 1px solid rgba(15,23,42,.10);
+    }
+
+    .pub-list {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 1rem;
+    }
+
+    .pub-item {
+      padding: 0.85rem 0;
+      border-bottom: 1px solid rgba(15,23,42,.06);
+    }
+
+    .pub-item:last-child {
+      border-bottom: none;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.35;
+    }
+
+    .pub-authors {
+      margin-top: 0.15rem;
+      color: #334155;
+    }
+
+    .pub-venue {
+      margin-top: 0.15rem;
+      color: #475569;
+      font-style: italic;
+    }
+
+    .pub-meta {
+      margin-top: 0.25rem;
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .pub-tag {
+      font-size: 0.85em;
+      color: #475569;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 1px 8px;
+      background: #fff;
+      font-style: normal;
+    }
+
+    .pub-link {
+      font-size: 0.85em;
+      color: #334155;
+      text-decoration: none;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 1px 8px;
+      background: #fff;
+    }
+
+    .pub-link:hover {
+      color: #0f172a;
+      border-color: #94a3b8;
+    }
+
+    .pub-award {
+      font-weight: 600;
+      color: #0f172a;
+      font-size: 0.95em;
+    }
+
+    /* Muted link styling inside publications */
+    #publications a {
+      color: #1e293b;
+      text-decoration: underline;
+      text-decoration-color: #cbd5e1;
+      text-underline-offset: 2px;
+    }
+
+    #publications a:hover {
+      color: #0f172a;
+      text-decoration-color: #0f172a;
+    }
   </style>
 </head>
-<body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container">
-	  
-	<div class="d-flex align-items-center gap-2 flex-wrap">
-	  <a href="index.html" rel="noopener" class="p-2">
-    <img alt="DMKI Lab Logo" src="img/dmki-logo-text-roboto-light.png" style="height: 28px;" />
-    </a>
-    <div style="height: 25px; border-left: 1px solid #ccc;"></div>
-	  <a href="https://www.dbai.tuwien.ac.at/" target="_blank" rel="noopener" class="p-2">
-		<img alt="DBAI Logo" src="img/dbai-logo.png" style="height: 25px;" />
-	  </a>
-    <div style="height: 25px; border-left: 1px solid #ccc;"></div>
-	  <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank" rel="noopener" class="py-2">
-		<img alt="TUW Informatics Logo" src="img/tuinformatics-logo.svg" style="height: 25px;" />
-	  </a>
-	</div>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li> 
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-				<li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-				<li class="nav-item"><a class="nav-link" href="news_full.html">News Archive</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Hero Section-->
-<div data-include="header.html"></div>
-
-<!-- Content Section -->
-<section class="py-5" id="publications">
-<div class="container">
-<h2>Publications</h2>
-
-<h4 style="margin-top: 2rem;">2026</h4>
-<ul class="list-group">
-	
-
-	
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-		<div class="ms-2 me-auto">
-			<a href="https://vbn.aau.dk/en/persons/martin-pek%C3%A1r-christensen-2/" target="_blank">M. P. Christensen</a>, <a href="https://lissandrini.com/" target="_blank">M. Lissandrini</a>, and <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Jazero: A Semantic Table Search System<br/>
-			In: <a href="https://icde2026.github.io/" target="_blank">ICDE 2026</a>, to appear
-		</div>
-		<span class="badge bg-primary rounded-pill">to appear</span>
-	</li>
-
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-		<div class="ms-2 me-auto">
-			<a href="https://marceloarenas.cl/" target="_blank">M. Arenas</a>, <a href="https://www.unibz.it/de/faculties/engineering/academic-staff/person/943-enrico-franconi" target="_blank">E. Franconi</a>, <a href="https://www.theoinf.uni-bayreuth.de/en/team/hammerer_janik/index.php" target="_blank">J. Hammerer</a>, <a href="https://olafhartig.de/" target="_blank">O. Hartig</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://laurakoesten.github.io/" target="_blank">L. Koesten</a>, <a href="https://www.konstantinidis.org/" target="_blank">G. Konstantinidis</a>, <a href="http://libk.in/" target="_blank">L. Libkin</a>, <a href="https://www.theoinf.uni-bayreuth.de/en/team/martens_wim/index.php" target="_blank">W. Martens</a>, <a href="https://yuya-s.github.io/en/index.html" target="_blank">Y. Sasaki</a>, <a href="https://www.fim.uni-passau.de/datenbanksysteme" target="_blank">S. Scherzinger</a>, <a href="https://scholar.google.com/citations?user=y09HEtgAAAAJ" target="_blank">K. Thornton</a>, <a href="https://www.ustp.at/de/uber-uns/mitarbeiter-innen-a-z/wu-hsiang-yun" target="_blank">H. Wu</a><br/>
-			Exploring Exploratory Querying<br/>
-			In: <a href="https://vldb.org/2026/" target="_blank"> VLDB 2026</a>, PVLDB 2025, vol. 18, no 13, pp. 5731-5739
-		</div>
-		<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.vldb.org/pvldb/vol18/p5731-konstantinidis.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-
-</ul>
 
 
-<h4 style="margin-top: 2rem;">2025</h4>
-<ul class="list-group">
-	
-	<!--<span class="badge bg-primary rounded-pill">to appear</span>-->
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+      <div class="container">
+        <div class="d-flex align-items-center gap-2 flex-wrap">
+          <a class="p-2" href="index.html" rel="noopener">
+            <img alt="DMKI Lab Logo" src="img/dmki-logo-text-roboto-light.png" style="height: 28px;">
+          </a>
+          <div style="height: 25px; border-left: 1px solid #ccc;"></div>
+          <a class="p-2" href="https://www.dbai.tuwien.ac.at/" rel="noopener" target="_blank">
+            <img alt="DBAI Logo" src="img/dbai-logo.png" style="height: 25px;">
+          </a>
+          <div style="height: 25px; border-left: 1px solid #ccc;"></div>
+          <a class="py-2" href="https://informatics.tuwien.ac.at/orgs/e192" rel="noopener" target="_blank">
+            <img alt="TUW Informatics Logo" src="img/tuinformatics-logo.svg" style="height: 25px;">
+          </a>
+        </div>
+        <button class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="jobs.html">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a aria-current="page" class="nav-link active" href="publications.html">Publications</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="team.html">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="teaching.html">Teaching</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="news_full.html">News Archive</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			A. Moharanaj, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			PlanRGCN: Predicting SPARQL Query Performance<br/>
-			In: <a href="https://vldb.org/2025/" target="_blank"> VLDB 2025</a>, volume 18, no. 6, pp. 1621-1634
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.vldb.org/pvldb/vol18/p1621-mohanaraj.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-		  <a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		  The Limits of Graph Samplers for Training Inductive Recommender Systems (<a href="https://arxiv.org/pdf/2505.14241">preprint</a>)<br/>
-		  In: <a href="https://vldb.org/2025/" target="_blank"> VLDB 2025</a>, volume 18, no. 8, pp. 2496-2504
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.vldb.org/pvldb/vol18/p2496-jendal.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			A. Moharanaj, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Smart SPARQL Advisor: Guiding Users in Query Formulation with Performance Prediction<br/>
-			In: <a href="https://vldb.org/2025/" target="_blank"> VLDB 2025</a>, volume 18, no. 12, pp. 5295-5298
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.vldb.org/pvldb/vol18/p5295-mohanaraj.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://kashif-rabbani.github.io/" target="_blank">K. Rabbani</a>, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="https://perso.liris.cnrs.fr/angela.bonifati/" target="_blank">A. Bonifati</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Transforming RDF Graphs to Property Graphs using Standardized Schemas<br/>
-			In: <a href="https://2025.sigmod.org/" target="_blank">SIGMOD 2025</a>, Volume 2, Issue 6, pp. 1-25, 2024
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1145/3698817" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+    <!-- Hero Section-->
+    <div data-include="header.html"></div>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>, M. Corfixen, M. Olesen, <a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, D. Dell'Aglio, <a href="https://lissandrini.com/">M. Lissandrini</a><br/>
-			The Yelp Collaborative Knowledge Graph<br/>
-			In: <a href="https://cikm2025.org/" target="_blank">CIKM 2025</a>, pp. 6414-6419
-		</div>
-		<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1145/3746252.3761615" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+    <!-- Content Section -->
+    <section class="py-5" id="publications">
+      <div class="container">
+        
+        <h2>Publications</h2>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			S. Ahmetaj, I. Boneva, J. Hidders, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, J.E.L. Gayo, W. Martens, F. Mogavero, F. Murlak, C. Okulmus, A. Polleres, O. Savkovic, M. Simkus, <a href="https://scholar.google.pl/citations?user=jOzcaXoAAAAJ" target="_blank">D. Tomaszuk</a><br/>
-			Common Foundations of SHACL, ShEx, and PG-Schema (<a href="https://doi.org/10.48550/arXiv.2502.01295" target="_blank">preprint</a>)<br/>
-			In: <a href="https://www2025.thewebconf.org/" target="_blank">The Web Conference 2025</a>, pp. 8-21
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1145/3696410.3714694" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+        <h4 class="pub-year" style="margin-top: 2rem;">2026</h4>
+        <ul class="pub-list">
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-		  <a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		  Handling New Users and Items: A Comparative Study of Inductive Recommenders<br/>
-		  In: <a href="https://ecmlpkdd.org/2025" target="_blank"> Data Mining and Knowledge Discovery 39, 58 (2025)</a>
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ebooks.iospress.nl/doi/10.3233/SSW250011" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			O. Pelgrin, R. Taelman, <a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-			Expressive Querying and Scalable Management of Large RDF Archives<br/>
-			In: <a href="https://www.semantic-web-journal.net" target="_blank"> SWJ 2025</a>
-	   </div>
-		<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.semantic-web-journal.net/content/expressive-querying-and-scalable-management-large-rdf-archives-0" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://www.mjakubowski.info/" target="_blank">M. Jakubowski</a>, D. Tomaszuk, and <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Bridging Gaps in RDF Validation - Insights and Innovation Opportunities in RDF Validation Practicse (<a href="https://dmki-tuwien.github.io/rdf-validation-community-survey/" target"_blank">website</a>)<br/>
-			In: <a href="https://2025-eu.semantics.cc/" target="_blank"> SEMANTiCS 2025</a>
-	   </div>
-		<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.3233/SSW250011" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+          <li class="pub-item">
+            <div class="pub-title">Jazero: A Semantic Table Search System</div>
+            <div class="pub-authors">
+              <a href="https://vbn.aau.dk/en/persons/martin-pek%C3%A1r-christensen-2/" target="_blank">M. P. Christensen</a>,<a href="https://lissandrini.com/" target="_blank">M. Lissandrini</a>, and<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://icde2026.github.io/" target="_blank">ICDE 2026</a>, to appear</div>
+            <div class="pub-meta">
+              <span class="pub-tag">to appear</span>
+            </div>
+          </li>
+          
+          <li class="pub-item">
+            <div class="pub-title">Exploring Exploratory Querying</div>
+            <div class="pub-authors">
+              <a href="https://marceloarenas.cl/" target="_blank">M. Arenas</a>,<a href="https://www.unibz.it/de/faculties/engineering/academic-staff/person/943-enrico-franconi" target="_blank">E. Franconi</a>,<a href="https://www.theoinf.uni-bayreuth.de/en/team/hammerer_janik/index.php" target="_blank">J. Hammerer</a>,<a href="https://olafhartig.de/" target="_blank">O. Hartig</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="https://laurakoesten.github.io/" target="_blank">L. Koesten</a>,<a href="https://www.konstantinidis.org/" target="_blank">G. Konstantinidis</a>,<a href="http://libk.in/" target="_blank">L. Libkin</a>,<a href="https://www.theoinf.uni-bayreuth.de/en/team/martens_wim/index.php" target="_blank">W. Martens</a>,<a href="https://yuya-s.github.io/en/index.html" target="_blank">Y. Sasaki</a>,<a href="https://www.fim.uni-passau.de/datenbanksysteme" target="_blank">S. Scherzinger</a>,<a href="https://scholar.google.com/citations?user=y09HEtgAAAAJ" target="_blank">K. Thornton</a>,<a href="https://www.ustp.at/de/uber-uns/mitarbeiter-innen-a-z/wu-hsiang-yun" target="_blank">H. Wu</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://vldb.org/2026/" target="_blank"> VLDB 2026</a>, PVLDB 2025, vol. 18, no 13, pp. 5731-5739</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.vldb.org/pvldb/vol18/p5731-konstantinidis.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+        </ul>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://lig-membres.imag.fr/amery/" target="_blank">S. Amer-Yahia</a>, <a href="https://www.zhaw.ch/de/ueber-uns/person/bogo" target="_blank">J. Bogojeska</a>, R. Facchinetti, V. Franceschi, <a href="https://www.kth.se/profile/argioni" target="_blank">A. Gionis</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://web.imsi.athenarc.gr/~georgia/" target="_blank">G. Koutrika</a>, R. Kouyos, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="https://silviu.maniu.info/" target="_blank">S. Maniu</a>, K. Mirylenka, <a href="https://mott.in/" target="_blank">D. Mottin</a>, <a href="https://helios2.mi.parisdescartes.fr/~themisp/" target="_blank">T. Palpanas</a>, M. Rigotti, <a href="https://velgias.github.io/" target="_blank">Y. Velegrakis</a><br/>
-			Towards Reliable Conversational Data Analytics<br/>
-			In: <a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a>, pp. 962-969 </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.48786/edbt.2025.78" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			M. P. Christensen, A. Leventidis, <a href="https://lissandrini.com/">M. Lissandrini</a>, L. Di Rocco, <a href="https://rjmillerlab.github.io/" target="_blank">R. J. Miller</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Fantastic Tables and Where to Find Them: Table Search in Semantic Data Lakes<br/>
-			In: <a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a>, pp. 397-410
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.48786/edbt.2025.32" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+        <h4 class="pub-year" style="margin-top: 2rem;">2025</h4>
+        <ul class="pub-list">
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, M. Vecovska, <a href="https://www.mjakubowski.info/" target="_blank">Maxime Jakubowski</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			RDFGraphGen: An RDF Graph Generator based on SHACL Shapes<br/>
-			In: <a href="https://ijckg2025.github.io/" target="_blank"> IJKGC 2025</a>, to appear
-		</div>
-	<span class="badge bg-primary rounded-pill">to appear</span>
-	</li>
+          <li class="pub-item">
+            <div class="pub-title">PlanRGCN: Predicting SPARQL Query Performance</div>
+            <div class="pub-authors">A. Moharanaj,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://vldb.org/2025/" target="_blank"> VLDB 2025</a>, volume 18, no. 6, pp. 1621-1634</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.vldb.org/pvldb/vol18/p1621-mohanaraj.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			A. Kapenekakis, D. Dell'Aglio, <a href="https://vbn.aau.dk/en/persons/m_boegsted" target="_blank">M. Bøgsted</a>, <a href="https://minosng.github.io/" target="_blank">M. Garofalakis</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Pasteur: Scaling Privacy-aware Data Synthesis<br/>
-      <strong>Best Paper Award</strong><br>
-			In: <a href="https://adbis2025.github.io/" target="_blank">ADBIS 2025</a>, pp. 164–180.
-	   </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1007/978-3-032-05281-0_11" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+          <li class="pub-item">
+            <div class="pub-title">The Limits of Graph Samplers for Training Inductive Recommender Systems (<a href="https://arxiv.org/pdf/2505.14241">preprint</a>)</div>
+            <div class="pub-authors">
+              <a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://vldb.org/2025/" target="_blank"> VLDB 2025</a>, volume 18, no. 8, pp. 2496-2504</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.vldb.org/pvldb/vol18/p2496-jendal.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			Y. Akter, <a href="https://alberto-abello.staff.upc.edu/" target="_blank">A. Abelló</a>, <a href="https://dtim.upc.edu/en/team/petar-jovanovic" target="_blank">P. Jovanovic</a>, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Evaluating Quality of Disparate Data Sources: A Discord-Driven Approach<br/>
-			In: <a href="https://adbis2025.github.io/" target="_blank">ADBIS 2025</a>, pp. 147–163.
-	   </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1007/978-3-032-05281-0_10" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+          <li class="pub-item">
+            <div class="pub-title">Smart SPARQL Advisor: Guiding Users in Query Formulation with Performance Prediction</div>
+            <div class="pub-authors">A. Moharanaj,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://vldb.org/2025/" target="_blank"> VLDB 2025</a>, volume 18, no. 12, pp. 5295-5298</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.vldb.org/pvldb/vol18/p5295-mohanaraj.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Transforming RDF Graphs to Property Graphs using Standardized Schemas</div>
+            <div class="pub-authors">
+              <a href="https://kashif-rabbani.github.io/" target="_blank">K. Rabbani</a>,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="https://perso.liris.cnrs.fr/angela.bonifati/" target="_blank">A. Bonifati</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://2025.sigmod.org/" target="_blank">SIGMOD 2025</a>, Volume 2, Issue 6, pp. 1-25, 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1145/3698817" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">The Yelp Collaborative Knowledge Graph</div>
+            <div class="pub-authors">
+              <a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>, M. Corfixen, M. Olesen,<a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, D. Dell'Aglio,<a href="https://lissandrini.com/">M. Lissandrini</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://cikm2025.org/" target="_blank">CIKM 2025</a>, pp. 6414-6419</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3746252.3761615" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Common Foundations of SHACL, ShEx, and PG-Schema (<a href="https://doi.org/10.48550/arXiv.2502.01295" target="_blank">preprint</a>)</div>
+            <div class="pub-authors">S. Ahmetaj, I. Boneva, J. Hidders,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, J.E.L. Gayo, W. Martens, F. Mogavero, F. Murlak, C. Okulmus, A. Polleres, O. Savkovic, M. Simkus,<a href="https://scholar.google.pl/citations?user=jOzcaXoAAAAJ" target="_blank">D. Tomaszuk</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://www2025.thewebconf.org/" target="_blank">The Web Conference 2025</a>, pp. 8-21</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1145/3696410.3714694" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Handling New Users and Items: A Comparative Study of Inductive Recommenders</div>
+            <div class="pub-authors">
+              <a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://ecmlpkdd.org/2025" target="_blank"> Data Mining and Knowledge Discovery 39, 58 (2025)</a>
+            </div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ebooks.iospress.nl/doi/10.3233/SSW250011" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Expressive Querying and Scalable Management of Large RDF Archives</div>
+            <div class="pub-authors">O. Pelgrin, R. Taelman,<a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://www.semantic-web-journal.net" target="_blank"> SWJ 2025</a>
+            </div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.semantic-web-journal.net/content/expressive-querying-and-scalable-management-large-rdf-archives-0" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Bridging Gaps in RDF Validation - Insights and Innovation Opportunities in RDF Validation Practicse (<a href="https://dmki-tuwien.github.io/rdf-validation-community-survey/" target"_blank"="">website</a>)</div>
+            <div class="pub-authors">
+              <a href="https://www.mjakubowski.info/" target="_blank">M. Jakubowski</a>, D. Tomaszuk, and<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://2025-eu.semantics.cc/" target="_blank"> SEMANTiCS 2025</a>
+            </div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.3233/SSW250011" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Towards Reliable Conversational Data Analytics</div>
+            <div class="pub-authors">
+              <a href="https://lig-membres.imag.fr/amery/" target="_blank">S. Amer-Yahia</a>,<a href="https://www.zhaw.ch/de/ueber-uns/person/bogo" target="_blank">J. Bogojeska</a>, R. Facchinetti, V. Franceschi,<a href="https://www.kth.se/profile/argioni" target="_blank">A. Gionis</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="https://web.imsi.athenarc.gr/~georgia/" target="_blank">G. Koutrika</a>, R. Kouyos,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="https://silviu.maniu.info/" target="_blank">S. Maniu</a>, K. Mirylenka,<a href="https://mott.in/" target="_blank">D. Mottin</a>,<a href="https://helios2.mi.parisdescartes.fr/~themisp/" target="_blank">T. Palpanas</a>, M. Rigotti,<a href="https://velgias.github.io/" target="_blank">Y. Velegrakis</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a>, pp. 962-969</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.48786/edbt.2025.78" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Fantastic Tables and Where to Find Them: Table Search in Semantic Data Lakes</div>
+            <div class="pub-authors">M. P. Christensen, A. Leventidis,<a href="https://lissandrini.com/">M. Lissandrini</a>, L. Di Rocco,<a href="https://rjmillerlab.github.io/" target="_blank">R. J. Miller</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://edbticdt2025.upc.edu/" target="_blank">EDBT 2025</a>, pp. 397-410</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.48786/edbt.2025.32" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">RDFGraphGen: An RDF Graph Generator based on SHACL Shapes</div>
+            <div class="pub-authors">
+              <a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, M. Vecovska,<a href="https://www.mjakubowski.info/" target="_blank">Maxime Jakubowski</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://ijckg2025.github.io/" target="_blank"> IJKGC 2025</a>, to appear</div>
+            <div class="pub-meta">
+              <span class="pub-tag">to appear</span>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Pasteur: Scaling Privacy-aware Data Synthesis</div>
+            <div class="pub-authors">A. Kapenekakis, D. Dell'Aglio,<a href="https://vbn.aau.dk/en/persons/m_boegsted" target="_blank">M. Bøgsted</a>,<a href="https://minosng.github.io/" target="_blank">M. Garofalakis</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://adbis2025.github.io/" target="_blank">ADBIS 2025</a>, pp. 164–180.</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1007/978-3-032-05281-0_11" rel="noopener" target="_blank">pdf</a>
+              <span class="pub-award">Best Paper Award</span>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Evaluating Quality of Disparate Data Sources: A Discord-Driven Approach</div>
+            <div class="pub-authors">Y. Akter,<a href="https://alberto-abello.staff.upc.edu/" target="_blank">A. Abelló</a>,<a href="https://dtim.upc.edu/en/team/petar-jovanovic" target="_blank">P. Jovanovic</a>,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://adbis2025.github.io/" target="_blank">ADBIS 2025</a>, pp. 147–163.</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1007/978-3-032-05281-0_10" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Applicability Assessment of Technologies for Predictive and Prescriptive Analytics of Nephrology Big Data</div>
+            <div class="pub-authors">R. Stojanov,<a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, S. Gramatikov, I. Mishkovski, E. Zdravevski, D. Sasanski, Z. Karapancheva, G. Spasovski, I. Vasileska, T. Eftimov, W. Zhuojun, J. Jankowski, D. Trajanov</div>
+            <div class="pub-venue">In: Proteomics, 2025, e202400135</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/full/10.1002/pmic.202400135" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Towards Generating Synthetic EHR Knowledge Graphs - a Probabilistic Approach</div>
+            <div class="pub-authors">
+              <a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, E. Milenkova,<a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://www.dbpedia.org/events/goblin25-workshop/" target="_blank">GOBLIN Workshop 2025</a>
+            </div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://zenodo.org/records/16572378" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">FHIR Lens: A Graph-Based Approach to Semantic EHR Exploration</div>
+            <div class="pub-authors">
+              <a href="https://scholar.google.pl/citations?user=jOzcaXoAAAAJ" target="_blank">D. Tomaszuk</a>, A. Smajevic,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://2025.cbms-conference.org/" target="_blank">CBMS 2025</a>, pp. 1-6</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.ieeecomputersociety.org/10.1109/CBMS65348.2025.00133" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Knowledge Graphs, Large Language Models, and Hallucinations: An NLP Perspective</div>
+            <div class="pub-authors">
+              <a href="https://ernlavr.github.io/" target="_blank">E. Lavrinovics</a>,<a href="https://vbn.aau.dk/en/persons/rubi" target="_blank">R. Biswas</a>,<a href="https://vbn.aau.dk/en/persons/jbjerva" target="_blank">J. Bjerva</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://www.sciencedirect.com/journal/journal-of-web-semantics" target="_blank">Journal of Web Semantics,</a>Volume 85, 2025</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1016/j.websem.2024.100844" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Utilizing Phonetic Similarity for Cross-language Toponym Matching - a Benchmark and Prototype</div>
+            <div class="pub-authors">
+              <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, M. Zaga, S. Rusinek, M. R. Fekete, J. Bjerva,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: Language Resources and Evaluation, 2025</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://link.springer.com/article/10.1007/s10579-025-09812-9" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Artificial intelligence in patients with atrial fibrillation to manage clinical complexity and comorbidities: the ARISTOTELES project</div>
+            <div class="pub-authors">G. Boriani, D. Antonio Mei, G. Y.H. Lip, on behalf of the ARISTOTELES Consortium</div>
+            <div class="pub-venue">In: European Heart Journal (2025) 46, 775-777</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1093/eurheartj/ehae792" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">TARGET: A Major European Project Aiming to Advance the Personalised Management of Atrial Fibrillation-Related Stroke via the Development of Health Virtual Twins Technology and Artificial Intelligence</div>
+            <div class="pub-authors">S. Ortega-Martorell, I. Olier, M. Ohlsson, G. Y. H. Lip, on behalf of the TARGET Consortium</div>
+            <div class="pub-venue">In: Thrombosis and Haemostasis, 2025, 125:7-11</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.thieme-connect.de/products/ejournals/abstract/10.1055/a-2438-5671" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">RDFGraphGen: An RDF Graph Generator based on SHACL Shapes</div>
+            <div class="pub-authors">
+              <a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, M. Vecovska,<a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, and<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: CoRR abs/2407.17941 (2025)</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://arxiv.org/abs/2407.17941" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">MultiHal: Multilingual Dataset for Knowledge-Graph Grounded Evaluation of LLM Hallucinations</div>
+            <div class="pub-authors">
+              <a href="https://ernlavr.github.io/" target="_blank">E. Lavrinovics</a>,<a href="https://vbn.aau.dk/en/persons/rubi" target="_blank">R. Biswas</a>,<a href="https://vbn.aau.dk/en/persons/jbjerva" target="_blank">J. Bjerva</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: CoRR abs/2505.14101 (2025)</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://arxiv.org/abs/2505.14101" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Towards Computer-Using Personal Agents</div>
+            <div class="pub-authors">
+              <a href="http://wpage.unina.it/pieroandrea.bonatti/" target="_blank">P. A. Bonatti</a>,<a href="https://profiles.open.ac.uk/john-domingue" target="_blank">J. Domingue</a>,<a href="https://anligentile.github.io/" target="_blank">A. L. Gentile</a>,<a href="https://www.wiso.rw.fau.de/forschung/forschungsprofil/professorenschaft/prof-dr-andreas-harth/" target="_blank">A. Harth</a>,<a href="https://olafhartig.de/" target="_blank">O. Hartig</a>,<a href="https://aidanhogan.com/" target="_blank">A. Hogan</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="https://www.citystgeorges.ac.uk/about/people/academics/ernesto-jimenez-ruiz" target="_blank">E. Jiménez-Ruiz</a>,<a href="https://faculty.rpi.edu/deborah-mcguinness" target="_blank">D. L. McGuinness</a>,<a href="https://www.maastrichtuniversity.nl/c-sun" target="_blank">C. Sun</a>,<a href="https://ruben.verborgh.org/" target="_blank">R. Verborgh</a>,<a href="https://www.cs.ox.ac.uk/people/jesse.wright/" target="_blank">J. Wright</a>
+            </div>
+            <div class="pub-venue">In: CoRR abs/2503.15515 (2025)</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.48550/arXiv.2503.15515" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Source Attribution in Retrieval-Augmented Generation</div>
+            <div class="pub-authors">
+              <a href="https://www.ulb.be/fr/ikhtiyor-nematov" target="_blank">I. Nematov</a>, T. Kalai, E. Kuzmenko, G. Fugagnoli,<a href="https://dsachar.net/" target="_blank">D. Sacharidis</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>
+            </div>
+            <div class="pub-venue">In: CoRR abs/2507.04480 (2025)</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.48550/arXiv.2507.04480" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+        </ul>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			R. Stojanov,  <a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>,  S. Gramatikov,  I. Mishkovski,  E. Zdravevski,  D. Sasanski,  Z. Karapancheva,  G. Spasovski,  I. Vasileska,  T. Eftimov,  W. Zhuojun,  J. Jankowski,  D. Trajanov<br/>
-			Applicability Assessment of Technologies for Predictive and Prescriptive Analytics of Nephrology Big Data<br/>
-			In: Proteomics, 2025, e202400135
-	   </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/full/10.1002/pmic.202400135" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, E. Milenkova, <a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a> <br/>
-			Towards Generating Synthetic EHR Knowledge Graphs - a Probabilistic Approach<br/>
-			In: <a href="https://www.dbpedia.org/events/goblin25-workshop/" target="_blank">GOBLIN Workshop 2025</a></div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://zenodo.org/records/16572378" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://scholar.google.pl/citations?user=jOzcaXoAAAAJ" target="_blank">D. Tomaszuk</a>, A. Smajevic, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a> <br/>
-			FHIR Lens: A Graph-Based Approach to Semantic EHR Exploration<br/>
-			In: <a href="https://2025.cbms-conference.org/" target="_blank">CBMS 2025</a>, pp. 1-6 </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.ieeecomputersociety.org/10.1109/CBMS65348.2025.00133" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://ernlavr.github.io/" target="_blank">E. Lavrinovics</a>, <a href="https://vbn.aau.dk/en/persons/rubi" target="_blank">R. Biswas</a>, <a href="https://vbn.aau.dk/en/persons/jbjerva" target="_blank">J. Bjerva</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Knowledge Graphs, Large Language Models, and Hallucinations: An NLP Perspective<br/>
-			In: <a href="https://www.sciencedirect.com/journal/journal-of-web-semantics" target="_blank">Journal of Web Semantics,</a> Volume 85, 2025
-	   </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1016/j.websem.2024.100844" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+        <h4 class="pub-year" style="margin-top: 2rem;">2024</h4>
+        <ul class="pub-list">
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, M. Zaga, S. Rusinek, M. R. Fekete, J. Bjerva, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			Utilizing Phonetic Similarity for Cross-language Toponym Matching - a Benchmark and Prototype<br/>
-			In: Language Resources and Evaluation, 2025
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://link.springer.com/article/10.1007/s10579-025-09812-9" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			G. Boriani, D. Antonio Mei, G. Y.H. Lip, on behalf of the ARISTOTELES Consortium<br/>
-			Artificial intelligence in patients with atrial fibrillation to manage clinical complexity and comorbidities: the ARISTOTELES project<br/>
-			In: European Heart Journal (2025) 46, 775-777
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1093/eurheartj/ehae792" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			S. Ortega-Martorell, I. Olier, M. Ohlsson, G. Y. H. Lip, on behalf of the TARGET Consortium<br/>
-			TARGET: A Major European Project Aiming to Advance the Personalised Management of Atrial Fibrillation-Related Stroke via the Development of Health Virtual Twins Technology and Artificial Intelligence<br/>
-			In: Thrombosis and Haemostasis, 2025, 125:7-11
-		</div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.thieme-connect.de/products/ejournals/abstract/10.1055/a-2438-5671" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+          <li class="pub-item">
+            <div class="pub-title">A Large Scale Test Corpus for Semantic Table Search</div>
+            <div class="pub-authors">A. Leventidis, M. P. Christensen,<a href="https://lissandrini.com/">M. Lissandrini</a>, L. Di Rocco ,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="https://rjmillerlab.github.io/" target="_blank">R. J. Miller</a>
+            </div>
+            <div class="pub-venue">
+              <a href="https://sigir-2024.github.io/" target="_blank">SIGIR 2024</a>, pp. 1142--1151</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3626772.3657877" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">KGLiDS: A Platform for Semantic Abstraction, Linking, and Automation of Data Science</div>
+            <div class="pub-authors">M. Helali, N. Monjazeb, S. Vashisth, P. Carrier, A. Helal, A. Cavalcante, K. Ammar,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="http://emansour.com/" target="_blank">E. Mansour</a>
+            </div>
+            <div class="pub-venue">
+              <a href="https://icde2024.github.io/" target="_blank">ICDE 2024</a>, pp. 179-192</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1109/ICDE60146.2024.00021" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">NPCS: Native Provenance Computation for SPARQL</div>
+            <div class="pub-authors">Z. Asma, D. Hernandez,<a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>, G. Flouris, I. Fundulaki,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">
+              <a href="https://www2024.thewebconf.org/" target_="_blank">TheWebConf 2024</a>, pp. 2085-2093 (<a href="https://www.youtube.com/watch?v=BYTOTNZY3lU">video</a>)</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3589334.3645557" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Synthesizing Accurate Relational Data under Differential Privacy</div>
+            <div class="pub-authors">A. Kapenekakis, D. Dell‘Aglio, C. Vestegham, L. Ø. Poulsen, M. Bøgsted, M. Garofalakis,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: IEEE Big Data 2024, pp. 433-439, 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.computer.org/csdl/proceedings-article/bigdata/2024/10825515/23ykOQFlnUI" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">ORAQL: An Overlap and Reliability Aware Query Processing Layer for Federations of Triple Fragment Interfaces</div>
+            <div class="pub-authors">T. Zeimetz,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="https://www.uni-trier.de/universitaet/fachbereiche-faecher/fachbereich-iv/faecher/informatikwissenschaften/professuren/datenbanken-und-informationssysteme/team/prof-dr-schenkel" target="_blank">R. Schenkel</a>
+            </div>
+            <div class="pub-venue">In:<a href="https://2024-eu.semantics.cc/" target="_blank">SEMANTiCS 2024</a>, pp. 328-344</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.3233/SSW240026" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Multimodal representation learning for medical analytics -- a systematic literature review</div>
+            <div class="pub-authors">E. R. Hansen,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: Health Informatics Journal, Volume 30, Issue 4, 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1177/14604582241290474" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">A benchmark and multi-stage pipeline for classifying underwater videos at scale</div>
+            <div class="pub-authors">S. K. Larsen, L. E. Rasmussen,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, Y. Lehahn</div>
+            <div class="pub-venue">In: International Journal on Image and Data Fusion, 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.tandfonline.com/doi/full/10.1080/19479832.2024.2416227" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">AIDE: Antithetical, Intent-based, and Diverse Example-Based Explanations (<a href="https://doi.org/10.48550/arXiv.2407.16010">preprint</a>)</div>
+            <div class="pub-authors">
+              <a href="https://www.ulb.be/fr/ikhtiyor-nematov" target="_blank">I. Nematov</a>,<a href="https://dsachar.net/" target="_blank">D. Sacharidis</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>
+            </div>
+            <div class="pub-venue">In: AIES 2024, pp. 1051-1062</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1609/aies.v7i1.31702" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">The Susceptibility of Example-Based Explainability Methods to Class Outliers</div>
+            <div class="pub-authors">
+              <a href="https://www.ulb.be/fr/ikhtiyor-nematov" target="_blank">I. Nematov</a>,<a href="https://dsachar.net/" target="_blank">D. Sacharidis</a>,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: AIMLAI icw. ECML PKDD 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.48550/arXiv.2407.20678" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Integrating Multi-Modal Spatial Data using Knowledge Graphs - a Case Study of Microflora Danica</div>
+            <div class="pub-authors">M. Corfixen, T. Heede,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, M. Albertsen, T. D. Nielsen,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">SeWeBMeDa 2024 icw. ESWC 2024, CEUR Vol. 3726</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ceur-ws.org/Vol-3726/paper1.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Mining Validating Shape for Large Knowledge Graphs via Dynamic Reservoir Sampling</div>
+            <div class="pub-authors">
+              <a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="https://kashif-rabbani.github.io/" target="_blank">K. Rabbani</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">SEBD 2024, pp. 25--34</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ceur-ws.org/Vol-3741/paper15.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Semantic Web: Past, Present, and Future</div>
+            <div class="pub-authors">A. Scherp, G. Groener, P. Skoda,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, M. Vidal</div>
+            <div class="pub-venue">TGDK 2024, Volume 2, Issue 1</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://drops.dagstuhl.de/entities/document/10.4230/TGDK.2.1.3" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Data-driven PC-chair-in-the-loop Formation of Program Committees: An EDBT 2023 Experience</div>
+            <div class="pub-authors">S. Bhowmick,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">SIGMOD Record, 53(2), June 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://sigmodrecord.org/publications/sigmodRecord/2406/pdfs/12_OpenForum_Bhowmick.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Hypergraphs with Attention on Reviews for Explainable Recommendation</div>
+            <div class="pub-authors">
+              <a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>, TH Le, H. Lauw,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: ECIR 2024, pp. 230–246, 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1007/978-3-031-56027-9_14" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">moduli: A Disaggregated Data Management Architecture for Data-Intensive Workflows</div>
+            <div class="pub-authors">P. Ceravolo, T. Cartarci, M. Console, P. Cudré-Mauroux, S. Groppe,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, J. Pokorny, O. Romero, R. Wrembel</div>
+            <div class="pub-venue">ACM SIGWEB Newsletter, Vol. 2024 Winter</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/abs/10.1145/3643603.3643607" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">A European network to develop virtual twin technology for personalized stroke mangement in atrial fibrillation: the TARGET consortium</div>
+            <div class="pub-authors">S. Ortega-Martorell, I. Olier, G. Y. H. Lip, on behalf of the TARGET Consortium</div>
+            <div class="pub-venue">In: European Heart Journal, Volume 46, Iusse 3, 2025, pp. 229-232</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://academic.oup.com/eurheartj/article-abstract/46/3/229/7905367" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Advancing personalised care in atrial fibrillation and stroke: The potential impact of AI from prevention to rehabilitation</div>
+            <div class="pub-authors">S. Ortega-Martorell, I. Olier, M. Ohlsson, G. Y. H. Lip, on behalf of the TARGET Consortium</div>
+            <div class="pub-venue">In: Trends in Cardiovascular Medicine, 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.sciencedirect.com/science/article/pii/S1050173824001105" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Recommending Tasks based on Search Queries and Missions</div>
+            <div class="pub-authors">D. Garigliotti, K. Balog,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, J. Bjerva</div>
+            <div class="pub-venue">In: Journal of Natural Language Engineering, pp. 577-601, 2024</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.cambridge.org/core/journals/natural-language-engineering/article/recommending-tasks-based-on-search-queries-and-missions/D9F183FA9B985ACC818D0035E271E95A" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+        </ul>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://mjovanovik.com/" target="_blank">M. Jovanovik</a>, M. Vecovska, <a href="https://mjakubowski.info/" target="_blank">M. Jakubowski</a>, and <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			RDFGraphGen: An RDF Graph Generator based on SHACL Shapes<br/>
-			In: CoRR abs/2407.17941 (2025)
-	   </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://arxiv.org/abs/2407.17941" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
 
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://ernlavr.github.io/" target="_blank">E. Lavrinovics</a>, <a href="https://vbn.aau.dk/en/persons/rubi" target="_blank">R. Biswas</a>, <a href="https://vbn.aau.dk/en/persons/jbjerva" target="_blank">J. Bjerva</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-			MultiHal: Multilingual Dataset for Knowledge-Graph Grounded Evaluation of LLM Hallucinations<br/>
-			In: CoRR abs/2505.14101 (2025)
-	   </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://arxiv.org/abs/2505.14101" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="http://wpage.unina.it/pieroandrea.bonatti/" target="_blank">P. A. Bonatti</a>, <a href="https://profiles.open.ac.uk/john-domingue" target="_blank">J. Domingue</a>, <a href="https://anligentile.github.io/" target="_blank">A. L. Gentile</a>, <a href="https://www.wiso.rw.fau.de/forschung/forschungsprofil/professorenschaft/prof-dr-andreas-harth/" target="_blank">A. Harth</a>, <a href="https://olafhartig.de/" target="_blank">O. Hartig</a>, <a href="https://aidanhogan.com/" target="_blank">A. Hogan</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://www.citystgeorges.ac.uk/about/people/academics/ernesto-jimenez-ruiz" target="_blank">E. Jiménez-Ruiz</a>, <a href="https://faculty.rpi.edu/deborah-mcguinness" target="_blank">D. L. McGuinness</a>, <a href="https://www.maastrichtuniversity.nl/c-sun" target="_blank">C. Sun</a>, <a href="https://ruben.verborgh.org/" target="_blank">R. Verborgh</a>, <a href="https://www.cs.ox.ac.uk/people/jesse.wright/" target="_blank">J. Wright</a> <br/>
-			Towards Computer-Using Personal Agents<br/>
-			In: CoRR abs/2503.15515 (2025)
-	   </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.48550/arXiv.2503.15515" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
-	
-	<li class="list-group-item d-flex justify-content-between align-items-start">
-	<div class="ms-2 me-auto">
-			<a href="https://www.ulb.be/fr/ikhtiyor-nematov" target="_blank">I. Nematov</a>, T. Kalai, E. Kuzmenko, G. Fugagnoli, <a href="https://dsachar.net/" target="_blank">D. Sacharidis</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a> <br/>
-			Source Attribution in Retrieval-Augmented Generation<br/>
-			In: CoRR abs/2507.04480 (2025)
-	   </div>
-	<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.48550/arXiv.2507.04480" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-	</li>
+        <h4 class="pub-year" style="margin-top: 2rem;">2023</h4>
+        <ul class="pub-list">
 
-</ul>
-
-	
-<h4 style="margin-top: 2rem;">2024</h4>
-<ul class="list-group">
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		A. Leventidis, M. P. Christensen, <a href="https://lissandrini.com/">M. Lissandrini</a>, L. Di Rocco , <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://rjmillerlab.github.io/" target="_blank">R. J. Miller</a><br/>
-		A Large Scale Test Corpus for Semantic Table Search<br/>
-		<a href="https://sigir-2024.github.io/" target="_blank">SIGIR 2024</a>, pp. 1142--1151
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1145/3626772.3657877" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		M. Helali, N. Monjazeb, S. Vashisth, P. Carrier, A. Helal, A. Cavalcante, K. Ammar, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="http://emansour.com/" target="_blank">E. Mansour</a><br/>
-		KGLiDS: A Platform for Semantic Abstraction, Linking, and Automation of Data Science<br/>
-		<a href="https://icde2024.github.io/" target="_blank">ICDE 2024</a>, pp. 179-192
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1109/ICDE60146.2024.00021" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		Z. Asma, D. Hernandez, <a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>, G. Flouris, I. Fundulaki, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		NPCS: Native Provenance Computation for SPARQL<br/>
-		<a href="https://www2024.thewebconf.org/" target_="_blank">TheWebConf 2024</a>, pp. 2085-2093 (<a href="https://www.youtube.com/watch?v=BYTOTNZY3lU">video</a>)
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1145/3589334.3645557" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		A. Kapenekakis, D. Dell‘Aglio, C. Vestegham, L. Ø. Poulsen, M. Bøgsted, M. Garofalakis, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		Synthesizing Accurate Relational Data under Differential Privacy<br/>
-		In: IEEE Big Data 2024, pp. 433-439, 2024
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.computer.org/csdl/proceedings-article/bigdata/2024/10825515/23ykOQFlnUI" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		T. Zeimetz, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://www.uni-trier.de/universitaet/fachbereiche-faecher/fachbereich-iv/faecher/informatikwissenschaften/professuren/datenbanken-und-informationssysteme/team/prof-dr-schenkel" target="_blank">R. Schenkel</a><br/>
-		ORAQL: An Overlap and Reliability Aware Query Processing Layer for Federations of Triple Fragment Interfaces<br/>
-		In: <a href="https://2024-eu.semantics.cc/" target="_blank">SEMANTiCS 2024</a>, pp. 328-344
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.3233/SSW240026" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		E. R. Hansen, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		Multimodal representation learning for medical analytics -- a systematic literature review<br/>
-		In: Health Informatics Journal, Volume 30, Issue 4, 2024
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1177/14604582241290474" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		S. K. Larsen, L. E. Rasmussen, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, Y. Lehahn<br/>
-		A benchmark and multi-stage pipeline for classifying underwater videos at scale<br/>
-		In: International Journal on Image and Data Fusion, 2024
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.tandfonline.com/doi/full/10.1080/19479832.2024.2416227" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		<a href="https://www.ulb.be/fr/ikhtiyor-nematov" target="_blank">I. Nematov</a>, <a href="https://dsachar.net/" target="_blank">D. Sacharidis</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a><br/>
-		AIDE: Antithetical, Intent-based, and Diverse Example-Based Explanations (<a href="https://doi.org/10.48550/arXiv.2407.16010">preprint</a>)<br/>
-		In: AIES 2024, pp. 1051-1062
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1609/aies.v7i1.31702" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		<a href="https://www.ulb.be/fr/ikhtiyor-nematov" target="_blank">I. Nematov</a>, <a href="https://dsachar.net/" target="_blank">D. Sacharidis</a>, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		The Susceptibility of Example-Based Explainability Methods to Class Outliers<br/>
-		In: AIMLAI icw. ECML PKDD 2024
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.48550/arXiv.2407.20678" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		M. Corfixen, T. Heede, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, M. Albertsen, T. D. Nielsen, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		Integrating Multi-Modal Spatial Data using Knowledge Graphs - a Case Study of Microflora Danica<br/>
-		SeWeBMeDa 2024 icw. ESWC 2024, CEUR Vol. 3726
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ceur-ws.org/Vol-3726/paper1.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		<a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="https://kashif-rabbani.github.io/" target="_blank">K. Rabbani</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		Mining Validating Shape for Large Knowledge Graphs via Dynamic Reservoir Sampling<br/>
-		SEBD 2024, pp. 25--34
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ceur-ws.org/Vol-3741/paper15.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		A. Scherp, G. Groener, P. Skoda, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, M. Vidal<br/>
-		Semantic Web: Past, Present, and Future<br/>
-		TGDK 2024, Volume 2, Issue 1
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://drops.dagstuhl.de/entities/document/10.4230/TGDK.2.1.3" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		S. Bhowmick, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		Data-driven PC-chair-in-the-loop Formation of Program Committees: An EDBT 2023 Experience<br/>
-		SIGMOD Record, 53(2), June 2024
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://sigmodrecord.org/publications/sigmodRecord/2406/pdfs/12_OpenForum_Bhowmick.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		<a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>, TH Le, H. Lauw, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br/>
-		Hypergraphs with Attention on Reviews for Explainable Recommendation<br/>
-		In: ECIR 2024, pp. 230–246, 2024
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1007/978-3-031-56027-9_14" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		P. Ceravolo, T. Cartarci, M. Console, P. Cudré-Mauroux, S. Groppe, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, J. Pokorny, O. Romero, R. Wrembel<br/>
-		moduli: A Disaggregated Data Management Architecture for Data-Intensive Workflows<br/>
-		ACM SIGWEB Newsletter, Vol. 2024 Winter
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/abs/10.1145/3643603.3643607" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		S. Ortega-Martorell, I. Olier, G. Y. H. Lip, on behalf of the TARGET Consortium<br/>
-		A European network to develop virtual twin technology for personalized stroke mangement in atrial fibrillation: the TARGET consortium<br/>
-		In: European Heart Journal, Volume 46, Iusse 3, 2025, pp. 229-232
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://academic.oup.com/eurheartj/article-abstract/46/3/229/7905367" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		S. Ortega-Martorell, I. Olier, M. Ohlsson, G. Y. H. Lip, on behalf of the TARGET Consortium<br/>
-		Advancing personalised care in atrial fibrillation and stroke: The potential impact of AI from prevention to rehabilitation<br/>
-		In: Trends in Cardiovascular Medicine, 2024
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.sciencedirect.com/science/article/pii/S1050173824001105" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		D. Garigliotti, K. Balog, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, J. Bjerva<br/>
-		Recommending Tasks based on Search Queries and Missions<br/>
-		In: Journal of Natural Language Engineering, pp. 577-601, 2024
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.cambridge.org/core/journals/natural-language-engineering/article/recommending-tasks-based-on-search-queries-and-missions/D9F183FA9B985ACC818D0035E271E95A" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-</ul>
-
-<h4 style="margin-top: 2rem;">2023</h4>
-<ul class="list-group">
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		A. Polleres, R. Pernisch, <a href="https://perso.liris.cnrs.fr/angela.bonifati/" target="_blank">A. Bonifati</a>, D. Dell‘Aglio, D. Dobriy, D. Dumbrava, L. Etcheverry, N. Ferranti, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, E. Jiminez-Ruiz, <a href="https://lissandrini.com/">M. Lissandrini</a>, A. Scherp, R. Tommasini, J. Wachs<br>
-    	How Does Knowledge Evolve in Open Knowledge Graphs?<br>
-    	TGDK, Vol. 1, Issue 1, Article No. 11, pp. 11:1–11:59
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://drops.dagstuhl.de/storage/08tgdk/tgdk-vol001/tgdk-vol001-issue001/TGDK.1.1.11/TGDK.1.1.11.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-	
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		T. Zeimetz, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, R. Schenkel<br>
-		Tunable Query Optimizer for Web APIs and User Preferences<br>
-		In: K-CAP 2023, pp. 92-100
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1145/3587259.3627542" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-start">
-<div class="ms-2 me-auto">
-		O. Pelgrin, R. Taelman, <a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-		The Need for Better RDF Archiving Benchmarks<br>
-		In: MepDAW 2023 icw. ISWC 2023, pp. 50-54
-    </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ceur-ws.org/Vol-3565/QuWeDa2023-paper4.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-	
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    G. Abuoda, C. Aebeloe, D. Dell‘Aglio, A. Keen, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    StarBench: Benchmarking RDF-star Triplestores<br>
-    In: QuWeDa 2023 icw. ISWC 2023, pp. 34-49
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ceur-ws.org/Vol-3565/QuWeDa2023-paper4.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    <a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    GlnRec: A Gated Architecture for Inductive Recommendation using Knowledge Graphs<br>
-    In: KARS 2023 icw. RecSys 2023, pp. 80-89
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ceur-ws.org/Vol-3560/long6.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    A. Lamurias, A. Tibo, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, M. Albertsen, T. D. Nielsen<br>
-    Graph Neural Networks for Metagenomic Binning<br>
-    In: CompBio Workshop icw. ICML 2023
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://icml-compbio.github.io/2023/papers/WCBICML2023_paper81.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-	
-	
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    C. Aebeloe, G. Montoya, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Optimizing SPARQL Queries over Decentralized Knowledge Graphs (<a href="https://doi.org/10.3233/SW-223064" target="_blank">details</a>)<br>
-    In: Semantic Web Journal, vol. 14, no. 6, pp. 1121-1165, 2023
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://content.iospress.com/articles/semantic-web/sw233438" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>	
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    A. Lamurias, A. Tibo, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, M. Albertsen, T. D. Nielsen<br>
-    Metagenomic Binning using Connectivity-constrained Variational Autoencoders<br>
-    In: ICML 2023, pp. 18471-18481
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://proceedings.mlr.press/v202/lamurias23a.html" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    <a href="https://kashif-rabbani.github.io/" target="_blank">K. Rabbani</a>, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    SHACTOR: Improving the Quality of Large-Scale Knowledge Graphs with Validating Shapes (<a href="https://dl.acm.org/doi/10.1145/3588696.3593123" target="_blank">details</a>)<br>
-    In: SIGMOD 2023, pp. 151-154
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1145/3555041.3589723" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    O. Pelgrin, R. Taelman, <a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    GLENDA: Querying RDF Archives with SPARQL (<a href="https://2023.eswc-conferences.org/demos/gblenda/" target="_blank">details</a>)<br>
-	  <strong>ESWC Best Demo Award</strong><br>
-    In: ESWC 2023, pp. 75-80
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.1007/978-3-031-43458-7_14" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    E. R. Hansen, T. D. Nielsen, T. Mulvad, M. N. Strausholm, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Patient Event Sequences for Predicting Hospitalization Length of Stay<br>
-    In: AIME 2023, pp. 51-56
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://link.springer.com/chapter/10.1007/978-3-031-34344-5_7" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    F. Årup Nielsen, I. Lyhne, D. Garigliotti, A. Butzbach, E. R. Boess, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, L. Kørnøv<br>
-    Environmental impact assessment reports in Wikidata and a Wikibase<br>
-    In: SemTech4STLD workshop at ESWC 2023
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://content.iospress.com/articles/semantic-web/sw233438" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    <a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>, D. Hernandez, A. Katim, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Visualizing How-Provenance Explanations for SPARQL Queries (<a href="https://github.com/katjahose/how-provenance-sparql" target="_blank">demo, code</a>)<br>
-    In: TheWebConf 2023, pp. 212-216
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ceur-ws.org/Vol-3443/ESWC_2023_SemTech4STLD_paper_3.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    A. Zaitoun, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    OntoEval: an Automated Ontology Evaluation System<br>
-    In: TheWebConf 2023, pp. 82-85
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1145/3543873.3587350" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    A. Zaitoun, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Automated Ontology Evaluation: Evaluating Coverage and Correctness using a Domain Corpus<br>
-    <strong>Best Paper Award</strong><br>
-    In: NLP4KGC workshop at TheWebConf 2023, pp. 1127-1137
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1145/3543873.3587617" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    B. Eyðfinsson Veyhe, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Scientific Data Extraction from Oceanographic Papers<br>
-    In: Sci-K workshop at TheWebConf 2023, pp.800-804
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1145/3543873.3587595" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    D. Garigliotti, J. Bjerva, F. Årup Nielsen, A. Butzbach, I. Lyhne, L. Kørnøv, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Do bridges dream of water pollutants? Towards DreamsKG, a knowledge graph to make digital access for sustainable environmental assessment come true<br>
-    In: KGS workshop icw. TheWebConf 2023, pp. 724-730
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://dl.acm.org/doi/10.1145/3543873.3587590" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    E. R. Hansen, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Diagnosis Prediction over Patient Data using Hierarchical Medical Taxonomies<br>
-    In: HEDAI workshop at EDBT 2023
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ceur-ws.org/Vol-3379/HeDAI_2023_paper400.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    <a href="https://kashif-rabbani.github.io/" target="_blank">K. Rabbani</a>, <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Extraction of Validating Shapes from very large Knowledge Graphs<br>
-    In: PVLDB 2023, vol. 16, no. 5 (<a href="https://relweb.cs.aau.dk/qse/" target="_blank">details</a>)
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://www.vldb.org/pvldb/vol16/p1023-rabbani.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    O. Pelgrin, R. Taelman, <a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Scaling Large RDF Archives To Very Long Histories<br>
-    In: ICSC 2023, pp. 41-48
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://ieeexplore.ieee.org/document/10066565" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    <a href="https://lissandrini.com/">M. Lissandrini</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, T. B. Pedersen<br>
-    Example-Driven Exploratory Analytics over Knowledge Graphs<br>
-    In: EDBT 2023, pp. 105-117
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://openproceedings.org/2023/conf/edbt/paper-182.pdf" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    Randi Jessen, Line Nielsen, Nicolai Balle Larsen, Arieh Sierra Cohen, Vithiagaran Gunalan, Elli-nor Marving, Alonzo Alfaro-Nunez, Charlotta Polacek, The Danish COVID-19 Genome Consortium (DCGC), Anders Fomsgaard, Katja Spiess<br>
-    RT-qPCR system using a degenerate probe for specific identification and differentiation of SARS-CoV-2 Omicron (B.1.1.529) variants of concern<br>
-    In: PLOS ONE, 2023
-  </div>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    I. Lyhne, P.A. Nielsen, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, L. Kørnøv<br>
-    Digitalisation of Environmental Assessment: The Danish Ecosystem Approach<br>
-    In: UVP, 2023
-  </div>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    E. R. Hansen, T. D. Nielsen, T. Mulvad, M. N. Strausholm, <a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>, <a href="http://katja-hose.de" target="_blank">K. Hose</a><br>
-    Hospitalization Length of Stay Prediction using Patient Event Sequences<br>
-    In: CoRR abs/2023.11042, 2023
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://doi.org/10.48550/arXiv.2303.11042" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-
-<li class="list-group-item d-flex justify-content-between align-items-start">
-  <div class="ms-2 me-auto">
-    M. Helali, S. Vashisth, P. Carrier, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, E. Mansour<br>
-    Linked Data Science powered by Knowledge Graphs (<a href="https://arxiv.org/abs/2303.02204" target="_blank">details</a>)<br>
-    In: CoRR abs/2303.02204, 2023
-  </div>
-<span class="badge bg-primary rounded-pill"><a class="badge rounded-pill bg-primary text-white" href="https://arxiv.org/abs/2303.02204" style="text-decoration: none; font-size: 0.875em;">pdf</a></span>
-</li>
-	
-	</ul>
-	
-</div>
-</section>
-	
-<!-- Contact & Footer Section-->
-<div data-include="footer.html"></div>
-	
-<script src="scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+          <li class="pub-item">
+            <div class="pub-title">How Does Knowledge Evolve in Open Knowledge Graphs?</div>
+            <div class="pub-authors">A. Polleres, R. Pernisch,<a href="https://perso.liris.cnrs.fr/angela.bonifati/" target="_blank">A. Bonifati</a>, D. Dell‘Aglio, D. Dobriy, D. Dumbrava, L. Etcheverry, N. Ferranti,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, E. Jiminez-Ruiz,<a href="https://lissandrini.com/">M. Lissandrini</a>, A. Scherp, R. Tommasini, J. Wachs</div>
+            <div class="pub-venue">TGDK, Vol. 1, Issue 1, Article No. 11, pp. 11:1–11:59</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://drops.dagstuhl.de/storage/08tgdk/tgdk-vol001/tgdk-vol001-issue001/TGDK.1.1.11/TGDK.1.1.11.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Tunable Query Optimizer for Web APIs and User Preferences</div>
+            <div class="pub-authors">T. Zeimetz,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, R. Schenkel</div>
+            <div class="pub-venue">In: K-CAP 2023, pp. 92-100</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1145/3587259.3627542" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">The Need for Better RDF Archiving Benchmarks</div>
+            <div class="pub-authors">O. Pelgrin, R. Taelman,<a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: MepDAW 2023 icw. ISWC 2023, pp. 50-54</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ceur-ws.org/Vol-3565/QuWeDa2023-paper4.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">StarBench: Benchmarking RDF-star Triplestores</div>
+            <div class="pub-authors">G. Abuoda, C. Aebeloe, D. Dell‘Aglio, A. Keen,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: QuWeDa 2023 icw. ISWC 2023, pp. 34-49</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ceur-ws.org/Vol-3565/QuWeDa2023-paper4.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">GlnRec: A Gated Architecture for Inductive Recommendation using Knowledge Graphs</div>
+            <div class="pub-authors">
+              <a href="https://vbn.aau.dk/en/persons/tjendal" target="_blank">T. E. Jendal</a>,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="https://vbn.aau.dk/da/persons/dolog" target="_blank">P. Dolog</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: KARS 2023 icw. RecSys 2023, pp. 80-89</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ceur-ws.org/Vol-3560/long6.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Graph Neural Networks for Metagenomic Binning</div>
+            <div class="pub-authors">A. Lamurias, A. Tibo,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, M. Albertsen, T. D. Nielsen</div>
+            <div class="pub-venue">In: CompBio Workshop icw. ICML 2023</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://icml-compbio.github.io/2023/papers/WCBICML2023_paper81.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Optimizing SPARQL Queries over Decentralized Knowledge Graphs (<a href="https://doi.org/10.3233/SW-223064" target="_blank">details</a>)</div>
+            <div class="pub-authors">C. Aebeloe, G. Montoya,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: Semantic Web Journal, vol. 14, no. 6, pp. 1121-1165, 2023</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://content.iospress.com/articles/semantic-web/sw233438" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Metagenomic Binning using Connectivity-constrained Variational Autoencoders</div>
+            <div class="pub-authors">A. Lamurias, A. Tibo,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, M. Albertsen, T. D. Nielsen</div>
+            <div class="pub-venue">In: ICML 2023, pp. 18471-18481</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://proceedings.mlr.press/v202/lamurias23a.html" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">SHACTOR: Improving the Quality of Large-Scale Knowledge Graphs with Validating Shapes (<a href="https://dl.acm.org/doi/10.1145/3588696.3593123" target="_blank">details</a>)</div>
+            <div class="pub-authors">
+              <a href="https://kashif-rabbani.github.io/" target="_blank">K. Rabbani</a>,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: SIGMOD 2023, pp. 151-154</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3555041.3589723" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">GLENDA: Querying RDF Archives with SPARQL (<a href="https://2023.eswc-conferences.org/demos/gblenda/" target="_blank">details</a>)</div>
+            <div class="pub-authors">O. Pelgrin, R. Taelman,<a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: ESWC 2023, pp. 75-80</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.1007/978-3-031-43458-7_14" rel="noopener" target="_blank">pdf</a>
+              <span class="pub-award">ESWC Best Demo Award</span>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Patient Event Sequences for Predicting Hospitalization Length of Stay</div>
+            <div class="pub-authors">E. R. Hansen, T. D. Nielsen, T. Mulvad, M. N. Strausholm,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: AIME 2023, pp. 51-56</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://link.springer.com/chapter/10.1007/978-3-031-34344-5_7" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Environmental impact assessment reports in Wikidata and a Wikibase</div>
+            <div class="pub-authors">F. Årup Nielsen, I. Lyhne, D. Garigliotti, A. Butzbach, E. R. Boess,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, L. Kørnøv</div>
+            <div class="pub-venue">In: SemTech4STLD workshop at ESWC 2023</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://content.iospress.com/articles/semantic-web/sw233438" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Visualizing How-Provenance Explanations for SPARQL Queries (<a href="https://github.com/katjahose/how-provenance-sparql" target="_blank">demo, code</a>)</div>
+            <div class="pub-authors">
+              <a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>, D. Hernandez, A. Katim,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: TheWebConf 2023, pp. 212-216</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ceur-ws.org/Vol-3443/ESWC_2023_SemTech4STLD_paper_3.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">OntoEval: an Automated Ontology Evaluation System</div>
+            <div class="pub-authors">A. Zaitoun,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: TheWebConf 2023, pp. 82-85</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3543873.3587350" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Automated Ontology Evaluation: Evaluating Coverage and Correctness using a Domain Corpus</div>
+            <div class="pub-authors">A. Zaitoun,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: NLP4KGC workshop at TheWebConf 2023, pp. 1127-1137</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3543873.3587617" rel="noopener" target="_blank">pdf</a>
+              <span class="pub-award">Best Paper Award</span>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Scientific Data Extraction from Oceanographic Papers</div>
+            <div class="pub-authors">B. Eyðfinsson Veyhe,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: Sci-K workshop at TheWebConf 2023, pp.800-804</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3543873.3587595" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Do bridges dream of water pollutants? Towards DreamsKG, a knowledge graph to make digital access for sustainable environmental assessment come true</div>
+            <div class="pub-authors">D. Garigliotti, J. Bjerva, F. Årup Nielsen, A. Butzbach, I. Lyhne, L. Kørnøv,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: KGS workshop icw. TheWebConf 2023, pp. 724-730</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://dl.acm.org/doi/10.1145/3543873.3587590" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Diagnosis Prediction over Patient Data using Hierarchical Medical Taxonomies</div>
+            <div class="pub-authors">E. R. Hansen,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: HEDAI workshop at EDBT 2023</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ceur-ws.org/Vol-3379/HeDAI_2023_paper400.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Extraction of Validating Shapes from very large Knowledge Graphs</div>
+            <div class="pub-authors">
+              <a href="https://kashif-rabbani.github.io/" target="_blank">K. Rabbani</a>,<a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: PVLDB 2023, vol. 16, no. 5 (<a href="https://relweb.cs.aau.dk/qse/" target="_blank">details</a>)</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://www.vldb.org/pvldb/vol16/p1023-rabbani.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Scaling Large RDF Archives To Very Long Histories</div>
+            <div class="pub-authors">O. Pelgrin, R. Taelman,<a href="http://luisgalarraga.de/" target="_blank">L. Galárraga</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: ICSC 2023, pp. 41-48</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://ieeexplore.ieee.org/document/10066565" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Example-Driven Exploratory Analytics over Knowledge Graphs</div>
+            <div class="pub-authors">
+              <a href="https://lissandrini.com/">M. Lissandrini</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, T. B. Pedersen</div>
+            <div class="pub-venue">In: EDBT 2023, pp. 105-117</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://openproceedings.org/2023/conf/edbt/paper-182.pdf" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">RT-qPCR system using a degenerate probe for specific identification and differentiation of SARS-CoV-2 Omicron (B.1.1.529) variants of concern</div>
+            <div class="pub-authors">Randi Jessen, Line Nielsen, Nicolai Balle Larsen, Arieh Sierra Cohen, Vithiagaran Gunalan, Elli-nor Marving, Alonzo Alfaro-Nunez, Charlotta Polacek, The Danish COVID-19 Genome Consortium (DCGC), Anders Fomsgaard, Katja Spiess</div>
+            <div class="pub-venue">In: PLOS ONE, 2023</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Digitalisation of Environmental Assessment: The Danish Ecosystem Approach</div>
+            <div class="pub-authors">I. Lyhne, P.A. Nielsen,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, L. Kørnøv</div>
+            <div class="pub-venue">In: UVP, 2023</div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Hospitalization Length of Stay Prediction using Patient Event Sequences</div>
+            <div class="pub-authors">E. R. Hansen, T. D. Nielsen, T. Mulvad, M. N. Strausholm,<a href="https://vbn.aau.dk/en/persons/tsagi" target="_blank">T. Sagi</a>,<a href="http://katja-hose.de" target="_blank">K. Hose</a>
+            </div>
+            <div class="pub-venue">In: CoRR abs/2023.11042, 2023</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://doi.org/10.48550/arXiv.2303.11042" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+          <li class="pub-item">
+            <div class="pub-title">Linked Data Science powered by Knowledge Graphs (<a href="https://arxiv.org/abs/2303.02204" target="_blank">details</a>)</div>
+            <div class="pub-authors">M. Helali, S. Vashisth, P. Carrier,<a href="http://katja-hose.de" target="_blank">K. Hose</a>, E. Mansour</div>
+            <div class="pub-venue">In: CoRR abs/2303.02204, 2023</div>
+            <div class="pub-meta">
+              <a class="pub-link" href="https://arxiv.org/abs/2303.02204" rel="noopener" target="_blank">pdf</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- Contact & Footer Section-->
+    <div data-include="footer.html"></div>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
