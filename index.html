@@ -78,6 +78,31 @@
     .img-thumbnail:hover {
       transform: scale(1.05);
     }
+  /* Keeps the intro from running across the full page width */
+  .dmki-intro-wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  /* Optional: slightly improve readability */
+  .dmki-intro-wrap p {
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+	/* DMKI-style links: subtle, academic, non-intrusive */
+	a {
+	  color: #1e293b;
+      text-decoration: underline;
+      text-decoration-color: #cbd5e1;
+      text-underline-offset: 2px;
+	}
+
+	a:hover,
+	a:focus {
+	  color: #0f172a;
+      text-decoration-color: #0f172a;
+	}
   </style>
 </head>
 <body>
@@ -124,13 +149,19 @@
 
 <!-- About Section -->
 <section id="about" class="py-4 pt-5" style="scroll-margin-top: 75px;">
-  <div class="container">
+  <div class="dmki-intro-wrap">
 <!--    <h2>About Us</h2> -->
-    <p>The <b>Data Management and Knowledge-Driven AI (DMKI)</b> Lab is part of the  <a href="https://www.dbai.tuwien.ac.at/" target="_blank">Databases and Artificial Intelligence (DBAI)</a> group at <a href="https://www.tuwien.at" target="_blank">TU Wien</a>'s <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank">Institute of Logic and Computation</a> and the <a href="https://informatics.tuwien.ac.at/" target="_blank">Faculty of Informatics</a>.</p>
-<!--    <p>Our joint ambition is to bring meaning to large amounts of heterogeneous data and exploit it in the best possible way for a broad range of use cases and applications, with particular focus on healthcare and bioscience.</p> -->
-    <p>Our research focuses on cutting-edge advancements in knowledge graphs, data management, AI, and their applications in healthcare, analytics, and more.</p>
-	<p style="color: #FF0000;">We are currently looking for new team members: 2 postdocs!<br>
- 		More details <a href="jobs.html">here</a>.</p> 
+    <p>The <b>Data Management and Knowledge-Driven AI (DMKI)</b> Lab is part of the <a href="https://www.dbai.tuwien.ac.at/" target="_blank">Databases and Artificial Intelligence (DBAI)</a> group at <a href="https://www.tuwien.at" target="_blank">TU Wien</a>'s <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank">Institute of Logic and Computation</a> within the <a href="https://informatics.tuwien.ac.at/" target="_blank">Faculty of Informatics</a>.<br>
+	Our research lies at the intersection of <b>data management</b>, <b>knowledge graphs</b>, and <b>artificial intelligence</b>, with a strong emphasis on scalable, reliable, and semantics-aware methods.
+    </p>
+	  
+    <p>
+	  We investigate how large, heterogeneous, and complex data can be transformed into structured knowledge and effectively combined with modern AI techniques, such as large language models, to design and build intelligent systems.
+	  A central goal of our work is to enable <b>meaningful</b>, <b>trustworthy</b>, and <b>reusable data-driven systems</b>, with a particular focus on healthcare, bioscience, and data-intensive analytics, while maintaining strong theoretical foundations and real-world impact.
+    </p>
+
+	<p>We are currently looking for <b>new team members</b>: <b>2 postdocs</b>!<br>
+ 		<strong>More details <a href="jobs.html">here</a></strong>.</p> 
   </div>
 </section>
 
