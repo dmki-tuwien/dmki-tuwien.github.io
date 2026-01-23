@@ -9,7 +9,7 @@ function includeHTML() {
         .then(data => {
             el.innerHTML = data;
             let thisPage = location.href.split("/").slice(-1).join("");
-            if (file === "news-2025.html" && !(thisPage === "news_full.html"))
+            if (file === "news-2026.html" && !(thisPage === "news_full.html"))
             {
                 console.log("Hi")
                 let no_removed = 0
