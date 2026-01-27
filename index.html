@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,87 +12,100 @@
     body {
       font-family: 'Segoe UI', sans-serif;
     }
+
     .hero {
       background: linear-gradient(to right, #9bc1fa, #478ffc);
       color: white;
       padding: 4rem 1rem;
       text-align: center;
     }
+
     .hero.academic {
-      background:#ffffff;
-      color:#0f172a;
-      padding:56px 20px;
-      border-bottom:1px solid rgba(15,23,42,.08);
-      text-align:left; /* important: not centered */
+      background: #ffffff;
+      color: #0f172a;
+      padding: 56px 20px;
+      border-bottom: 1px solid rgba(15, 23, 42, .08);
+      text-align: left;
+      /* important: not centered */
     }
+
     .footer {
       background-color: #f8f9fa;
       padding: 20px 0;
       text-align: center;
     }
+
     .navbar {
       position: sticky;
       top: 0;
       z-index: 1030;
     }
+
     .navbar img {
       max-height: 40px;
       height: auto;
       object-fit: contain;
     }
-  	.card-title {
-  	  font-weight: 600;
-  	}
-  	.card-img-top {
-  	  width: 100%;
-  	  height: 150px;
-  	  object-fit: contain;
-  	}
-  	.card-body {
-  	  display: flex;
-  	  flex-direction: column;
-  	  justify-content: space-between;
-  	}
 
-  	.card-body .card-text {
-  	  flex-grow: 1;
-  	}
+    .card-title {
+      font-weight: 600;
+    }
 
-  	.card-body .btn-group {
-  	  margin-top: 1rem;
-  	}
+    .card-img-top {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+    }
 
-      .badge-purple {
-        background-color:#6610f2;
-  	  color:white;
-      }
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-      .badge-red {
-  		background-color:#e74c3c;
-  		color:white;
-      }
+    .card-body .card-text {
+      flex-grow: 1;
+    }
+
+    .card-body .btn-group {
+      margin-top: 1rem;
+    }
+
+    .badge-purple {
+      background-color: #6610f2;
+      color: white;
+    }
+
+    .badge-red {
+      background-color: #e74c3c;
+      color: white;
+    }
 
     .img-thumbnail {
       cursor: pointer;
       transition: transform 0.2s ease;
     }
+
     .img-thumbnail:hover {
       transform: scale(1.05);
     }
-  /* Keeps the intro from running across the full page width */
-  .dmki-intro-wrap {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-  }
 
-  /* Optional: slightly improve readability */
-  .dmki-intro-wrap p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-	/* DMKI-style links: subtle, academic, non-intrusive */
-    div.flex-column a, p a {
+    /* Keeps the intro from running across the full page width */
+    .dmki-intro-wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Optional: slightly improve readability */
+    .dmki-intro-wrap p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* DMKI-style links: subtle, academic, non-intrusive */
+    div.flex-column a,
+    p a {
       color: #1e293b !important;
       text-decoration: underline !important;
       text-decoration-color: #cbd5e1 !important;
@@ -105,375 +119,421 @@
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
 
-	<div class="d-flex align-items-center gap-2 flex-wrap">
-	  <a href="index.html" rel="noopener" class="p-2">
-    <img alt="DMKI Lab Logo" src="img/dmki-logo-text-roboto-light.png" style="height: 28px;" />
-    </a>
-    <div style="height: 25px; border-left: 1px solid #ccc;"></div>
-	  <a href="https://www.dbai.tuwien.ac.at/" target="_blank" rel="noopener" class="p-2">
-		<img alt="DBAI Logo" src="img/dbai-logo.png" style="height: 25px;" />
-	  </a>
-    <div style="height: 25px; border-left: 1px solid #ccc;"></div>
-	  <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank" rel="noopener" class="py-2">
-		<img alt="TUW Informatics Logo" src="img/tuinformatics-logo.svg" style="height: 25px;" />
-	  </a>
-	</div>
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <a href="index.html" rel="noopener" class="p-2">
+          <img alt="DMKI Lab Logo" src="img/dmki-logo-text-roboto-light.png" style="height: 28px;" />
+        </a>
+        <div style="height: 25px; border-left: 1px solid #ccc;"></div>
+        <a href="https://www.dbai.tuwien.ac.at/" target="_blank" rel="noopener" class="p-2">
+          <img alt="DBAI Logo" src="img/dbai-logo.png" style="height: 25px;" />
+        </a>
+        <div style="height: 25px; border-left: 1px solid #ccc;"></div>
+        <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank" rel="noopener" class="py-2">
+          <img alt="TUW Informatics Logo" src="img/tuinformatics-logo.svg" style="height: 25px;" />
+        </a>
+      </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
-        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-	    <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-        <li class="nav-item"><a class="nav-link" href="news_full.html">News Archive</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-      </ul>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="news_full.html">News Archive</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/orgs/dmki-tuwien/"><img alt="github-logo" src="img/github-logo.png" style="height: 14px; padding-bottom: 2px;"></a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Hero Section-->
-<div data-include="header.html"></div>
+  <!-- Hero Section-->
+  <div data-include="header.html"></div>
 
-<!-- About Section -->
-<section id="about" class="py-4 pt-5" style="scroll-margin-top: 75px;">
-  <div class="dmki-intro-wrap">
-<!--    <h2>About Us</h2> -->
-    <p>The <b>Data Management and Knowledge-Driven AI (DMKI)</b> Lab is part of the <a href="https://www.dbai.tuwien.ac.at/" target="_blank">Databases and Artificial Intelligence (DBAI)</a> group at <a href="https://www.tuwien.at" target="_blank">TU Wien</a>'s <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank">Institute of Logic and Computation</a> within the <a href="https://informatics.tuwien.ac.at/" target="_blank">Faculty of Informatics</a>.<br>
-	Our research lies at the intersection of <b>data management</b>, <b>knowledge graphs</b>, and <b>artificial intelligence</b>, with a strong emphasis on scalable, reliable, and semantics-aware methods.
-    </p>
-	  
-    <p>
-	  We investigate how large, heterogeneous, and complex data can be transformed into structured knowledge and effectively combined with modern AI techniques, such as large language models, to design and build intelligent systems.
-	  A central goal of our work is to enable <b>meaningful</b>, <b>trustworthy</b>, and <b>reusable data-driven systems</b>, with a particular focus on healthcare, bioscience, and data-intensive analytics, while maintaining strong theoretical foundations and real-world impact.
-    </p>
+  <!-- About Section -->
+  <section id="about" class="py-4 pt-5" style="scroll-margin-top: 75px;">
+    <div class="dmki-intro-wrap">
+      <!--    <h2>About Us</h2> -->
+      <p>The <b>Data Management and Knowledge-Driven AI (DMKI)</b> Lab is part of the <a
+          href="https://www.dbai.tuwien.ac.at/" target="_blank">Databases and Artificial Intelligence (DBAI)</a> group
+        at <a href="https://www.tuwien.at" target="_blank">TU Wien</a>'s <a
+          href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank">Institute of Logic and Computation</a>
+        within the <a href="https://informatics.tuwien.ac.at/" target="_blank">Faculty of Informatics</a>.<br>
+        Our research lies at the intersection of <b>data management</b>, <b>knowledge graphs</b>, and <b>artificial
+          intelligence</b>, with a strong emphasis on scalable, reliable, and semantics-aware methods.
+      </p>
 
-	<!--<p>We are currently looking for <b>new team members</b>: <b>2 postdocs</b>!<br>
+      <p>
+        We investigate how large, heterogeneous, and complex data can be transformed into structured knowledge and
+        effectively combined with modern AI techniques, such as large language models, to design and build intelligent
+        systems.
+        A central goal of our work is to enable <b>meaningful</b>, <b>trustworthy</b>, and <b>reusable data-driven
+          systems</b>, with a particular focus on healthcare, bioscience, and data-intensive analytics, while
+        maintaining strong theoretical foundations and real-world impact.
+      </p>
+
+      <!--<p>We are currently looking for <b>new team members</b>: <b>2 postdocs</b>!<br>
  		<strong>More details <a href="jobs.html">here</a></strong>.</p> -->
-  </div>
-</section>
-
-
-<!-- News Section -->
-<section id="news" class="py-4">
-  <div class="container">
-    <h2>Latest News</h2>
-	<div id="news-embed" data-include="news-2026.html"></div>
-    <div class="mt-5 d-flex justify-content-center">
-      <a href="news_full.html" class="btn btn-outline-primary btn-sm">More News</a>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Team Section -->
-<section id="team" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="mb-4 text-center">Team</h2>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 justify-content-center">
-
-      <!-- Katja Hose -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <img src="img/katjahose.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Katja Hose" style="width: 150px; height: 150px; object-fit: cover; object-position: center top;">
-          <div class="card-body">
-            <h5 class="card-title">Prof. Dr.-Ing. Katja Hose</h5>
-            <p class="card-text text-muted">Research Lead</p>
-            <a href="https://www.dbai.tuwien.ac.at/staff/khose/About_me.html" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Maxime Jakubowski -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <img src="img/maximejakubowski.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Maxime Jakubowski" style="width: 150px; height: 150px; object-fit: cover; object-position: center 30%;">
-          <div class="card-body">
-            <h5 class="card-title">Dr. Maxime Jakubowski</h5>
-            <p class="card-text text-muted">Postdoctoral Researcher</p>
-            <a href="https://mjakubowski.info/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Milos Jovanovik -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <img src="img/milosjovanovik.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Milos Jovanovik" style="width: 150px; height: 150px; object-fit: cover; object-position: center 20%;">
-          <div class="card-body">
-            <h5 class="card-title">Dr. Milos Jovanovik</h5>
-            <p class="card-text text-muted">Postdoctoral Researcher</p>
-            <a href="https://mjovanovik.com/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-          </div>
-        </div>
-      </div>
-
-<!-- Tommaso Dolci -->
-<div class="col">
-  <div class="card h-100 shadow-sm border-0">
-    <img src="img/tommasodolci.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Tommaso Dolci" style="width: 150px; height: 150px; object-fit: cover; object-position: center 25%;">
-    <div class="card-body text-center">
-      <h5 class="card-title">MSc Tommaso Dolci</h5>
-      <p class="card-text text-muted">PhD Student</p>
-      <a href="https://informatics.tuwien.ac.at/people/tommaso-dolci" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-    </div>
-  </div>
-</div>
-
-<!-- Koumudi Ganepola -->
-<div class="col">
-  <div class="card h-100 shadow-sm border-0">
-    <img src="img/koumudiganepola.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Koumudi Ganepola" style="width: 150px; height: 150px; object-fit: cover; object-position: center 25%;">
-    <div class="card-body text-center">
-      <h5 class="card-title">MSc Koumudi Ganepola</h5>
-      <p class="card-text text-muted">PhD Student</p>
-      <a href="https://informatics.tuwien.ac.at/people/koumudi-ganepola" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-    </div>
-  </div>
-</div>
-
-<!-- Johannes Schrott -->
-<div class="col">
-  <div class="card h-100 shadow-sm border-0">
-    <img src="img/johannesschrott.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Johannes Schrott" style="width: 150px; height: 150px; object-fit: cover;">
-    <div class="card-body text-center">
-      <h5 class="card-title">DI Johannes Schrott</h5>
-      <p class="card-text text-muted">PhD Student</p>
-      <a href="https://johannes.schrott.onl/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-    </div>
-  </div>
-</div>
-
-		<!-- Nader Sobhi -->
-<div class="col">
-  <div class="card h-100 shadow-sm border-0">
-    <img src="img/nadersobhi.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Nader Sobhi" style="width: 150px; height: 150px; object-fit: cover;">
-    <div class="card-body text-center">
-      <h5 class="card-title">MSc Nader Sobhi</h5>
-      <p class="card-text text-muted">PhD Student</p>
-      <a href="https://informatics.tuwien.ac.at/people/nader-sobhi" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-    </div>
-  </div>
-</div>
-		
-<!-- Gabriele Carrino -->
-<div class="col">
-  <div class="card h-100 shadow-sm border-0">
-    <img src="img/gabrielecarrino.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Gabriele Carrino" style="width: 150px; height: 150px; object-fit: cover;">
-    <div class="card-body text-center">
-      <h5 class="card-title">MSc Gabriele Carrino</h5>
-      <p class="card-text text-muted">PhD Student (external, IBM)</p>
-      <a href="https://it.linkedin.com/in/gabriele-carrino-a36b06295" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-    </div>
-  </div>
-</div>
-		
-<!-- Gokul Karthik Kumar -->
-<div class="col">
-  <div class="card h-100 shadow-sm border-0">
-    <img src="img/gokulkarthikkumar.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Gabriele Carrino" style="width: 150px; height: 150px; object-fit: cover;">
-    <div class="card-body text-center">
-      <h5 class="card-title">MSc Gokul Karthik Kumar</h5>
-      <p class="card-text text-muted">PhD Student (external, IBM)</p>
-      <a href="https://www.gokul.ch" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-    </div>
-  </div>
-</div>
-		
-
-    </div>
-  </div>
-</section>
-
-
-<!-- Projects Section -->
-<section id="projects" class="py-5 bg-white">
-  <div class="container">
-    <h2 class="mb-5 text-center">Current Projects and Initiatives</h2>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-
-      <!-- DORSET WWTF ICT-25 -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://wwtf.at/funding/programmes/ict/ICT25-032/" target="_blank" rel="noopener">
-            <img src="img/wwtf-logo.jpg" class="card-img-top p-4" alt="WWTF Logo" style="height: 150px; object-fit: contain;">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">DORSET</h5>
-            <p class="card-text text-muted small">
-              <strong>Full Title:</strong> From Structures to Vectors: Decoding How Knowledge Graph Characteristics Shape Embedding Strategies<br>
-              <strong>Funding:</strong> WWTF (Vienna Science And Technology Fund)
-            </p>
-            <a href="https://wwtf.at/funding/programmes/ict/ICT25-032/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-<!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
-          </div>
-        </div>
-      </div>
-
-      <!-- TUInsight Reloaded -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <!--<a href="https://wwtf.at/funding/programmes/ict/ICT25-032/" target="_blank" rel="noopener">-->
-            <img src="img/tuinsightreloaded-logo.jpg" class="card-img-top p-4" alt="WWTF Logo" style="height: 150px; object-fit: contain;">
-          <!--</a>-->
-          <div class="card-body">
-            <h5 class="card-title">TUInsight Reloaded</h5>
-            <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Natural Language Access and Performance Boost for TUInsight<br>
-              <strong>Funding:</strong> TU Wien
-            </p>
-            <!--<a href="https://wwtf.at/funding/programmes/ict/ICT25-032/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">-->
-			Learn More
-			<!--</a>-->
-<!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
-          </div>
-        </div>
-      </div>
-
-      <!-- DEAI Erasmus Mundus Master -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://https://deai.ulb.be/" target="_blank" rel="noopener">
-            <img src="img/deai-logo.png" class="card-img-top p-4" alt="DEAI Logo" style="height: 150px; object-fit: contain;">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">DEAI</h5>
-            <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Data Engineering and Artificial Intelligence
-              <br>
-              <strong>Funding:</strong> Erasmus Mundus Joint Master
-            </p>
-            <a href="https://deai.ulb.be/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-<!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
-          </div>
-        </div>
-      </div>
-
-      <!-- ARMADA Project -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://armada-dn.eu/" target="_blank" rel="noopener">
-            <img src="img/armada-logo.png" class="card-img-top p-4" alt="ARMADA Logo" style="height: 150px; object-fit: contain;">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">ARMADA</h5>
-            <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Reliable Conversational Domain-specific Data Exploration and Analysis<br>
-              <strong>Funding:</strong> Horizon Europe MSCA DN (Grant Agreement No. 101168951)
-            </p>
-            <a href="https://armada-dn.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-<!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
-          </div>
-        </div>
-      </div>
-
-      <!-- TARGET Project -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://target-horizon.eu/" target="_blank" rel="noopener">
-            <img src="img/target-logo.jpg" class="card-img-top p-4" alt="TARGET Logo" style="height: 150px; object-fit: contain;">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">TARGET</h5>
-            <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Health Virtual Twins for the Personalised Management of Stroke Related to Atrial Fibrillation<br>
-              <strong>Funding:</strong> Horizon Europe (Grant Agreement No. 101136244)
-            </p>
-            <a href="https://target-horizon.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-<!--            <a href="https://cordis.europa.eu/project/id/101136244" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
-          </div>
-        </div>
-      </div>
-
-      <!-- ARISTOTELES Project -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://aristoteles-horizon.eu/" target="_blank" rel="noopener">
-            <img src="img/aristoteles-logo.jpg" class="card-img-top p-4" alt="ARISTOTELES Logo" style="height: 150px; object-fit: contain;">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">ARISTOTELES</h5>
-            <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Applying Artificial Intelligence to Define Clinical Trajectories for Personalized Prediction and Early Detection of Comorbidity and Multimorbidity Patterns<br>
-              <strong>Funding:</strong> Horizon Europe (Grant Agreement No. 101080189)
-            </p>
-            <a href="https://aristoteles-horizon.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-<!--            <a href="https://cordis.europa.eu/project/id/101080189" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
-          </div>
-        </div>
-      </div>
-
-      <!-- GOBLIN COST Action -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
-            <img src="img/cost-logo.png" class="card-img-top p-4" alt="COST Logo" style="height: 150px; object-fit: contain;">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">GOBLIN</h5>
-            <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Global Network on Large-Scale, Cross-domain and Multilingual Open Knowledge Graphs (GOBLIN) <br>
-              <strong>Funding:</strong> COST (European Cooperation in Science and Technology) (CA23147)
-            </p>
-            <a href="https://www.cost.eu/actions/CA23147/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- KGELL COST Action -->
-      <div class="col">
-        <div class="card h-100 text-center border-0 shadow-sm">
-          <a href="https://www.cost.eu/actions/CA24121/" target="_blank" rel="noopener">
-            <img src="img/cost-logo.png" class="card-img-top p-4" alt="COST Logo" style="height: 150px; object-fit: contain;">
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">KGELL</h5>
-            <p class="card-text text-muted small">
-              <strong>Full Title:</strong> Knowledge Graphs in the Era of Large Language Models (KGELL) <br>
-              <strong>Funding:</strong> COST (European Cooperation in Science and Technology) (CA24121)
-            </p>
-            <a href="https://www.cost.eu/actions/CA24121/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">Learn More</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="mt-4 text-center"><a class="btn btn-outline-primary btn-sm" href="projects.html">More Projects</a></div></div>
-</section>
-
-
-<!-- Contact & Footer Section-->
-<div data-include="footer.html"></div>
-
-
-
-<!-- Image Modal - for clickable pictures -->
-<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content bg-transparent border-0">
-      <div class="modal-body p-0">
-        <img src="" id="modalImage" class="img-fluid rounded" alt="Enlarged view">
+  <!-- News Section -->
+  <section id="news" class="py-4">
+    <div class="container">
+      <h2>Latest News</h2>
+      <div id="news-embed" data-include="news-2026.html"></div>
+      <div class="mt-5 d-flex justify-content-center">
+        <a href="news_full.html" class="btn btn-outline-primary btn-sm">More News</a>
       </div>
     </div>
-  </div>
-</div>
+  </section>
 
-<script src="scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Team Section -->
+  <section id="team" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4 text-center">Team</h2>
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-3 g-4 justify-content-center">
+
+        <!-- Katja Hose -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <img src="img/katjahose.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Katja Hose"
+              style="width: 150px; height: 150px; object-fit: cover; object-position: center top;">
+            <div class="card-body">
+              <h5 class="card-title">Prof. Dr.-Ing. Katja Hose</h5>
+              <p class="card-text text-muted">Research Lead</p>
+              <a href="https://www.dbai.tuwien.ac.at/staff/khose/About_me.html" class="btn btn-outline-primary btn-sm"
+                target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Maxime Jakubowski -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <img src="img/maximejakubowski.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Maxime Jakubowski"
+              style="width: 150px; height: 150px; object-fit: cover; object-position: center 30%;">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Maxime Jakubowski</h5>
+              <p class="card-text text-muted">Postdoctoral Researcher</p>
+              <a href="https://mjakubowski.info/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Milos Jovanovik -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <img src="img/milosjovanovik.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Milos Jovanovik"
+              style="width: 150px; height: 150px; object-fit: cover; object-position: center 20%;">
+            <div class="card-body">
+              <h5 class="card-title">Dr. Milos Jovanovik</h5>
+              <p class="card-text text-muted">Postdoctoral Researcher</p>
+              <a href="https://mjovanovik.com/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tommaso Dolci -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/tommasodolci.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Tommaso Dolci"
+              style="width: 150px; height: 150px; object-fit: cover; object-position: center 25%;">
+            <div class="card-body text-center">
+              <h5 class="card-title">MSc Tommaso Dolci</h5>
+              <p class="card-text text-muted">PhD Student</p>
+              <a href="https://informatics.tuwien.ac.at/people/tommaso-dolci" class="btn btn-outline-primary btn-sm"
+                target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Koumudi Ganepola -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/koumudiganepola.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Koumudi Ganepola"
+              style="width: 150px; height: 150px; object-fit: cover; object-position: center 25%;">
+            <div class="card-body text-center">
+              <h5 class="card-title">MSc Koumudi Ganepola</h5>
+              <p class="card-text text-muted">PhD Student</p>
+              <a href="https://informatics.tuwien.ac.at/people/koumudi-ganepola" class="btn btn-outline-primary btn-sm"
+                target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Johannes Schrott -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/johannesschrott.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Johannes Schrott"
+              style="width: 150px; height: 150px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title">DI Johannes Schrott</h5>
+              <p class="card-text text-muted">PhD Student</p>
+              <a href="https://johannes.schrott.onl/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nader Sobhi -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/nadersobhi.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Nader Sobhi"
+              style="width: 150px; height: 150px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title">MSc Nader Sobhi</h5>
+              <p class="card-text text-muted">PhD Student</p>
+              <a href="https://informatics.tuwien.ac.at/people/nader-sobhi" class="btn btn-outline-primary btn-sm"
+                target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gabriele Carrino -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/gabrielecarrino.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Gabriele Carrino"
+              style="width: 150px; height: 150px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title">MSc Gabriele Carrino</h5>
+              <p class="card-text text-muted">PhD Student (external, IBM)</p>
+              <a href="https://it.linkedin.com/in/gabriele-carrino-a36b06295" class="btn btn-outline-primary btn-sm"
+                target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gokul Karthik Kumar -->
+        <div class="col">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="img/gokulkarthikkumar.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Gabriele Carrino"
+              style="width: 150px; height: 150px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title">MSc Gokul Karthik Kumar</h5>
+              <p class="card-text text-muted">PhD Student (external, IBM)</p>
+              <a href="https://www.gokul.ch" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="mb-5 text-center">Current Projects and Initiatives</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+
+        <!-- DORSET WWTF ICT-25 -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <a href="https://wwtf.at/funding/programmes/ict/ICT25-032/" target="_blank" rel="noopener">
+              <img src="img/wwtf-logo.jpg" class="card-img-top p-4" alt="WWTF Logo"
+                style="height: 150px; object-fit: contain;">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">DORSET</h5>
+              <p class="card-text text-muted small">
+                <strong>Full Title:</strong> From Structures to Vectors: Decoding How Knowledge Graph Characteristics
+                Shape Embedding Strategies<br>
+                <strong>Funding:</strong> WWTF (Vienna Science And Technology Fund)
+              </p>
+              <a href="https://wwtf.at/funding/programmes/ict/ICT25-032/" class="btn btn-outline-primary btn-sm me-2"
+                target="_blank" rel="noopener">Learn More</a>
+              <!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- TUInsight Reloaded -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <!--<a href="https://wwtf.at/funding/programmes/ict/ICT25-032/" target="_blank" rel="noopener">-->
+            <img src="img/tuinsightreloaded-logo.jpg" class="card-img-top p-4" alt="WWTF Logo"
+              style="height: 150px; object-fit: contain;">
+            <!--</a>-->
+            <div class="card-body">
+              <h5 class="card-title">TUInsight Reloaded</h5>
+              <p class="card-text text-muted small">
+                <strong>Full Title:</strong> Natural Language Access and Performance Boost for TUInsight<br>
+                <strong>Funding:</strong> TU Wien
+              </p>
+              <!--<a href="https://wwtf.at/funding/programmes/ict/ICT25-032/" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener">-->
+              Learn More
+              <!--</a>-->
+              <!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- DEAI Erasmus Mundus Master -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <a href="https://https://deai.ulb.be/" target="_blank" rel="noopener">
+              <img src="img/deai-logo.png" class="card-img-top p-4" alt="DEAI Logo"
+                style="height: 150px; object-fit: contain;">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">DEAI</h5>
+              <p class="card-text text-muted small">
+                <strong>Full Title:</strong> Data Engineering and Artificial Intelligence
+                <br>
+                <strong>Funding:</strong> Erasmus Mundus Joint Master
+              </p>
+              <a href="https://deai.ulb.be/" class="btn btn-outline-primary btn-sm me-2" target="_blank"
+                rel="noopener">Learn More</a>
+              <!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- ARMADA Project -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <a href="https://armada-dn.eu/" target="_blank" rel="noopener">
+              <img src="img/armada-logo.png" class="card-img-top p-4" alt="ARMADA Logo"
+                style="height: 150px; object-fit: contain;">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">ARMADA</h5>
+              <p class="card-text text-muted small">
+                <strong>Full Title:</strong> Reliable Conversational Domain-specific Data Exploration and Analysis<br>
+                <strong>Funding:</strong> Horizon Europe MSCA DN (Grant Agreement No. 101168951)
+              </p>
+              <a href="https://armada-dn.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank"
+                rel="noopener">Learn More</a>
+              <!--            <a href="https://cordis.europa.eu/project/id/101168951" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- TARGET Project -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <a href="https://target-horizon.eu/" target="_blank" rel="noopener">
+              <img src="img/target-logo.jpg" class="card-img-top p-4" alt="TARGET Logo"
+                style="height: 150px; object-fit: contain;">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">TARGET</h5>
+              <p class="card-text text-muted small">
+                <strong>Full Title:</strong> Health Virtual Twins for the Personalised Management of Stroke Related to
+                Atrial Fibrillation<br>
+                <strong>Funding:</strong> Horizon Europe (Grant Agreement No. 101136244)
+              </p>
+              <a href="https://target-horizon.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank"
+                rel="noopener">Learn More</a>
+              <!--            <a href="https://cordis.europa.eu/project/id/101136244" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- ARISTOTELES Project -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <a href="https://aristoteles-horizon.eu/" target="_blank" rel="noopener">
+              <img src="img/aristoteles-logo.jpg" class="card-img-top p-4" alt="ARISTOTELES Logo"
+                style="height: 150px; object-fit: contain;">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">ARISTOTELES</h5>
+              <p class="card-text text-muted small">
+                <strong>Full Title:</strong> Applying Artificial Intelligence to Define Clinical Trajectories for
+                Personalized Prediction and Early Detection of Comorbidity and Multimorbidity Patterns<br>
+                <strong>Funding:</strong> Horizon Europe (Grant Agreement No. 101080189)
+              </p>
+              <a href="https://aristoteles-horizon.eu/" class="btn btn-outline-primary btn-sm me-2" target="_blank"
+                rel="noopener">Learn More</a>
+              <!--            <a href="https://cordis.europa.eu/project/id/101080189" class="btn btn-outline-secondary btn-sm" target="_blank" rel="noopener">CORDIS</a>-->
+            </div>
+          </div>
+        </div>
+
+        <!-- GOBLIN COST Action -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <a href="https://www.cost.eu/actions/CA23147/" target="_blank" rel="noopener">
+              <img src="img/cost-logo.png" class="card-img-top p-4" alt="COST Logo"
+                style="height: 150px; object-fit: contain;">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">GOBLIN</h5>
+              <p class="card-text text-muted small">
+                <strong>Full Title:</strong> Global Network on Large-Scale, Cross-domain and Multilingual Open Knowledge
+                Graphs (GOBLIN) <br>
+                <strong>Funding:</strong> COST (European Cooperation in Science and Technology) (CA23147)
+              </p>
+              <a href="https://www.cost.eu/actions/CA23147/" class="btn btn-outline-primary btn-sm me-2" target="_blank"
+                rel="noopener">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- KGELL COST Action -->
+        <div class="col">
+          <div class="card h-100 text-center border-0 shadow-sm">
+            <a href="https://www.cost.eu/actions/CA24121/" target="_blank" rel="noopener">
+              <img src="img/cost-logo.png" class="card-img-top p-4" alt="COST Logo"
+                style="height: 150px; object-fit: contain;">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">KGELL</h5>
+              <p class="card-text text-muted small">
+                <strong>Full Title:</strong> Knowledge Graphs in the Era of Large Language Models (KGELL) <br>
+                <strong>Funding:</strong> COST (European Cooperation in Science and Technology) (CA24121)
+              </p>
+              <a href="https://www.cost.eu/actions/CA24121/" class="btn btn-outline-primary btn-sm me-2" target="_blank"
+                rel="noopener">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mt-4 text-center"><a class="btn btn-outline-primary btn-sm" href="projects.html">More Projects</a></div>
+    </div>
+  </section>
+
+
+  <!-- Contact & Footer Section-->
+  <div data-include="footer.html"></div>
+
+
+
+  <!-- Image Modal - for clickable pictures -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-transparent border-0">
+        <div class="modal-body p-0">
+          <img src="" id="modalImage" class="img-fluid rounded" alt="Enlarged view">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
