@@ -1,309 +1,732 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<title>DMKI Lab - Team</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="favicon.ico" rel="icon"/>
-<style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DMKI Lab - Team</title>
+  <link rel="icon" href="favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-muted: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #1d4ed8;
+      --accent-soft: #eff6ff;
+      --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 14px 32px rgba(15, 23, 42, 0.08);
+      --radius: 18px;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
     }
-    .hero {
-      background: linear-gradient(to right, #9bc1fa, #478ffc);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .hero.academic {
-      background:#ffffff;
-      color:#0f172a;
-      padding:56px 20px;
-      border-bottom:1px solid rgba(15,23,42,.08);
-      text-align:left; /* important: not centered */
-    }
-    .footer {
-      background-color: #f8f9fa;
-      padding: 20px 0;
-      text-align: center;
-    }
+
     .navbar {
       position: sticky;
       top: 0;
       z-index: 1030;
+      background: rgba(255, 255, 255, 0.96) !important;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.06);
     }
+
     .navbar img {
       max-height: 40px;
       height: auto;
       object-fit: contain;
     }
+
+    .nav-link {
+      color: #334155 !important;
+      font-weight: 500;
+      padding-left: .85rem !important;
+      padding-right: .85rem !important;
+    }
+
+    .nav-link.active,
+    .nav-link:hover {
+      color: var(--accent) !important;
+    }
+
+    .page-shell {
+      padding: 3.5rem 0 5rem;
+    }
+
+    .page-intro {
+      background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+      border: 1px solid rgba(37, 99, 235, 0.08);
+      border-radius: 28px;
+      padding: 3rem;
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.06);
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: .9rem;
+      padding: .35rem .75rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    .page-title {
+      font-size: clamp(2.1rem, 4vw, 3rem);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: .85rem;
+    }
+
+    .page-subtitle {
+      max-width: 760px;
+      font-size: 1.04rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .team-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      margin-top: 1rem;
+    }
+
+    .stat-pill {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: .55rem .9rem;
+      font-size: .92rem;
+      color: #334155;
+    }
+
+    .section-block {
+      margin-top: 3.25rem;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: .85rem;
+      margin-bottom: 1.35rem;
+      font-size: 1.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .section-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, rgba(148, 163, 184, 0.55), rgba(148, 163, 184, 0));
+    }
+
+    .section-note {
+      color: var(--muted);
+      margin-top: -0.35rem;
+      margin-bottom: 1.3rem;
+      max-width: 760px;
+    }
+
+    .team-card {
+      height: 100%;
+      background: var(--surface);
+      border: 1px solid rgba(226, 232, 240, 0.95);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      overflow: hidden;
+    }
+
+    .team-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(59, 130, 246, 0.25);
+    }
+
+    .card-body {
+      padding: 1.5rem 1.35rem 1.4rem;
+    }
+
+    .team-photo-wrap {
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+
     .team-photo {
-      width: 140px;
-      height: 140px;
+      border-radius: 50%;
       object-fit: cover;
+      background: #e2e8f0;
+      border: 5px solid #fff;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.10);
+    }
+
+    .photo-prof { width: 190px; height: 190px; }
+    .photo-postdoc { width: 170px; height: 170px; }
+    .photo-phd { width: 156px; height: 156px; }
+    .photo-alumni { width: 132px; height: 132px; }
+
+    .member-name {
+      font-size: 1.08rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: .35rem;
+    }
+
+    .member-role {
+      color: var(--muted);
+      font-size: .93rem;
+      margin-bottom: .9rem;
+    }
+
+    .member-meta {
+      font-size: .89rem;
+      color: #475569;
+      margin-bottom: 1rem;
+      min-height: 2.7em;
+    }
+
+    .profile-link {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      padding: .45rem .85rem;
+      border-radius: 999px;
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: .87rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background .2s ease, border-color .2s ease, color .2s ease;
+    }
+
+    .profile-link:hover {
+      background: #dbeafe;
+      border-color: rgba(37, 99, 235, 0.28);
+      color: #1e40af;
+    }
+
+    .alumni-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fafafa 100%);
+      box-shadow: none;
+    }
+
+    .alumni-card:hover {
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .alumni-grid .member-meta {
+      min-height: unset;
+    }
+
+    .footer-shell {
+      background: #fff;
+      border-top: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    @media (max-width: 991.98px) {
+      .page-intro {
+        padding: 2rem 1.5rem;
+      }
+
+      .nav-link {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .page-shell {
+        padding-top: 2rem;
+      }
+
+      .page-intro {
+        border-radius: 22px;
+      }
+
+      .section-title {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
 <body>
-	
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-  <div class="container">
-	  
-	<div class="d-flex align-items-center gap-2 flex-wrap">
-	  <a href="index.html" rel="noopener" class="p-2">
-    <img alt="DMKI Lab Logo" src="img/dmki-logo-text-roboto-light.png" style="height: 28px;" />
-    </a>
-    <div style="height: 25px; border-left: 1px solid #ccc;"></div>
-	  <a href="https://www.dbai.tuwien.ac.at/" target="_blank" rel="noopener" class="p-2">
-		<img alt="DBAI Logo" src="img/dbai-logo.png" style="height: 25px;" />
-	  </a>
-    <div style="height: 25px; border-left: 1px solid #ccc;"></div>
-	  <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank" rel="noopener" class="py-2">
-		<img alt="TUW Informatics Logo" src="img/tuinformatics-logo.svg" style="height: 25px;" />
-	  </a>
-	</div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <nav class="navbar navbar-expand-lg shadow-sm">
+    <div class="container">
+      <div class="d-flex align-items-center gap-2 flex-wrap">
+        <a href="index.html" rel="noopener" class="p-2">
+          <img alt="DMKI Lab Logo" src="img/dmki-logo-text-roboto-light.png" style="height: 28px;" />
+        </a>
+        <div style="height: 25px; border-left: 1px solid #cbd5e1;"></div>
+        <a href="https://www.dbai.tuwien.ac.at/" target="_blank" rel="noopener" class="p-2">
+          <img alt="DBAI Logo" src="img/dbai-logo.png" style="height: 25px;" />
+        </a>
+        <div style="height: 25px; border-left: 1px solid #cbd5e1;"></div>
+        <a href="https://informatics.tuwien.ac.at/orgs/e192" target="_blank" rel="noopener" class="py-2">
+          <img alt="TUW Informatics Logo" src="img/tuinformatics-logo.svg" style="height: 25px;" />
+        </a>
+      </div>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li> 
-        <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
-        <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-		<li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
-		<li class="nav-item"><a class="nav-link" href="news_full.html">News Archive</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
-      </ul>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="jobs.html">Jobs</a></li>
+          <li class="nav-item"><a class="nav-link" href="publications.html">Publications</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="team.html">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="tools.html">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="teaching.html">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="news_full.html">News Archive</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
-<!-- Hero Section-->
-<div data-include="header.html"></div>
+  <div data-include="header.html"></div>
 
-<!-- Content Section -->
-<section id="team">
-
-  <div class="container my-5 px-5">
-    <h1 class="text-center">Team</h1>
-
-    <!-- CURRENT TEAM -->
-    <section class="mb-5">
-<!--      <h2>Current Team</h2> -->
-
-      <!-- Professors -->
-      <h4 class="mt-3">Professors</h4>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pt-3 justify-content-center">
-		  <!-- Katja Hose -->
-		  <div class="col">
-			<div class="card h-100 text-center border-0 shadow-sm">
-			  <img src="img/katjahose.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Katja Hose" style="width: 200px; height: 200px; object-fit: cover; object-position: center top;">
-			  <div class="card-body">
-				<h5 class="card-title">Prof. Dr.-Ing. Katja Hose</h5>
-				<p class="card-text text-muted">Research Lead</p>
-				<a href="https://www.dbai.tuwien.ac.at/staff/khose/About_me.html" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			  </div>
-			</div>
-		  </div>
-      </div>
-
-      <!-- Postdocs -->
-      <h4 class="mt-5">Postdocs</h4>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pt-3 justify-content-center">
+  <main class="page-shell">
+    <section id="team">
+      <div class="container px-lg-4">
 		  
-		  <!-- Maxime Jakubowski -->
-		  <div class="col">
-			<div class="card h-100 text-center border-0 shadow-sm">
-			  <img src="img/maximejakubowski.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Maxime Jakubowski" style="width: 200px; height: 200px; object-fit: cover; object-position: center 30%;">
-			  <div class="card-body">
-				<h5 class="card-title">Dr. Maxime Jakubowski</h5>
-				<p class="card-text text-muted">Postdoctoral Researcher</p>
-				<a href="https://mjakubowski.info/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			  </div>
-			</div>
-		  </div>
-
-		  <!-- Milos Jovanovik -->
-		  <div class="col">
-			<div class="card h-100 text-center border-0 shadow-sm">
-			  <img src="img/milosjovanovik.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Milos Jovanovik" style="width: 200px; height: 200px; object-fit: cover; object-position: center 20%;">
-			  <div class="card-body">
-				<h5 class="card-title">Dr. Milos Jovanovik</h5>
-				<p class="card-text text-muted">Postdoctoral Researcher</p>
-				<a href="https://mjovanovik.com/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			  </div>
-			</div>
-		  </div>
 		  
-		  <!-- Davide Longo -->
-		  <div class="col">
-			<div class="card h-100 text-center border-0 shadow-sm">
-			  <img src="img/davidelongo.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Maxime Jakubowski" style="width: 200px; height: 200px; object-fit: cover; object-position: center 30%;">
-			  <div class="card-body">
-				<h5 class="card-title">Dr. Davide Mario Longo</h5>
-				<p class="card-text text-muted">Postdoctoral Researcher</p>
-				<a href="https://sites.google.com/view/davideml-homepage" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			  </div>
-			</div>
-		  </div>
-		  
-      </div>
-		
+<!--        <div class="page-intro">
+          <h1 class="page-title">People</h1>
+          <p class="page-subtitle">
+            The DMKI Lab brings together researchers and students working across data management,
+            knowledge-intensive AI, and machine learning systems. This page highlights current team
+            members as well as alumni and visiting researchers who have contributed to the lab.
+          </p>
+          <div class="team-stats">
+            <span class="stat-pill">1 Professor</span>
+            <span class="stat-pill">3 Postdocs</span>
+            <span class="stat-pill">4 PhD Students · TU Wien</span>
+            <span class="stat-pill">3 PhD Students · TU Wien with partner affiliations</span>
+            <span class="stat-pill">8 PhD Students · Aalborg University</span>
+          </div>
+        </div>-->
 
-      <!-- PhD Students -->
-      <h4 class="mt-5">PhD Students</h4>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pt-3 justify-content-center">
-
-		<!-- Tommaso Dolci -->
-		<div class="col">
-		  <div class="card h-100 shadow-sm border-0">
-			<img src="img/tommasodolci.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Tommaso Dolci" style="width: 200px; height: 200px; object-fit: cover; object-position: center 25%;">
-			<div class="card-body text-center">
-			  <h5 class="card-title">MSc Tommaso Dolci</h5>
-			  <p class="card-text text-muted">PhD Student</p>
-			  <a href="https://tommasod.github.io" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			</div>
-		  </div>
-		</div>
-		  
-		<!-- Koumudi Ganepola -->
-		<div class="col">
-		  <div class="card h-100 shadow-sm border-0">
-			<img src="img/koumudiganepola.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Koumudi Ganepola" style="width: 200px; height: 200px; object-fit: cover; object-position: center 25%;">
-			<div class="card-body text-center">
-			  <h5 class="card-title">MSc Koumudi Ganepola</h5>
-			  <p class="card-text text-muted">PhD Student</p>
-			  <a href="https://informatics.tuwien.ac.at/people/koumudi-ganepola" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			</div>
-		  </div>
-		</div>
-		  
-		<!-- Johannes Schrott -->
-		<div class="col">
-		  <div class="card h-100 shadow-sm border-0">
-			<img src="img/johannesschrott.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Johannes Schrott" style="width: 200px; height: 200px; object-fit: cover;">
-			<div class="card-body text-center">
-			  <h5 class="card-title">DI Johannes Schrott</h5>
-			  <p class="card-text text-muted">PhD Student</p>
-			  <a href="https://johannes.schrott.onl/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			</div>
-		  </div>
-		</div>
-
-		<!-- Nader Sobhi -->
-		<div class="col">
-		  <div class="card h-100 shadow-sm border-0">
-			<img src="img/nadersobhi.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Nader Sobhi" style="width: 200px; height: 200px; object-fit: cover; object-position: center 25%;">
-			<div class="card-body text-center">
-			  <h5 class="card-title">MSc Nader Sobhi</h5>
-			  <p class="card-text text-muted">PhD Student</p>
-			  <a href="https://nader2929.github.io/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			</div>
-		  </div>
-		</div>
-      </div>
-		
-		
-		
-      <!-- PhD Students -->
-      <h4 class="mt-5">PhD Students (external)</h4>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pt-3 justify-content-center">
-		  
-		<!-- Gabriele Carrino -->
-		<div class="col">
-		  <div class="card h-100 shadow-sm border-0">
-			<img src="img/gabrielecarrino.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Gabriele Carrino" style="width: 200px; height: 200px; object-fit: cover; object-position: center 25%;">
-			<div class="card-body text-center">
-			  <h5 class="card-title">MSc Gabriele Carrino</h5>
-			  <p class="card-text text-muted">PhD Student (IBM)</p>
-			  <a href="https://it.linkedin.com/in/gabriele-carrino-a36b06295" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			</div>
-		  </div>
-		</div>
-		  
-		<!-- Yifei Dong -->
-		<div class="col">
-		  <div class="card h-100 shadow-sm border-0">
-			<img src="img/yifeidong.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Yifei Dong" style="width: 200px; height: 200px; object-fit: cover; object-position: center 25%;">
-			<div class="card-body text-center">
-			  <h5 class="card-title">MSc Yifei Dong</h5>
-			  <p class="card-text text-muted">PhD Student (ARC)</p>
-			  <a href="https://darelab.athenarc.gr/people/yifei/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			</div>
-		  </div>
-		</div>
-
-		<!-- Gokul Karthik Kumar -->
-		<div class="col">
-		  <div class="card h-100 shadow-sm border-0">
-			<img src="img/gokulkarthikkumar.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Gabriele Carrino" style="width: 200px; height: 200px; object-fit: cover; object-position: center 25%;">
-			<div class="card-body text-center">
-			  <h5 class="card-title">MSc Gokul Karthik Kumar</h5>
-			  <p class="card-text text-muted">PhD Student (IBM)</p>
-			  <a href="https://www.gokul.ch" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			</div>
-		  </div>
-		</div>
-
-
-      <!-- Add more sections as needed (Research Assistants, Visitors) -->
-    </section>
-
-	  
-    <!-- FORMER MEMBERS -->
-    <section>
-      <h2>Alumni</h2>
-		
-      <!-- Postdocs -->
-      <h4 style="margin-top: 1rem;">Postdocs</h4>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pt-3 justify-content-center">
-        <!-- Dominik Tomazuk -->
-        <div class="col">
-          <div class="card h-100 shadow-sm border-0">
-            <img src="img/dominiktomaszuk.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Dominik Tomaszuk" style="width: 150px; height: 150px; object-fit: cover;">
-            <div class="card-body text-center">
-              <h5 class="card-title">Dr. Dominik Tomaszuk</h5>
-              <p class="card-text text-muted">Last seen as Researcher at the University of Bialystok, Poland</p>
+        <section class="section-block">
+          <h2 class="section-title">Faculty</h2>
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center">
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/katjahose.jpg" class="team-photo photo-prof" alt="Katja Hose" style="object-position: center top;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">Prof. Dr.-Ing. Katja Hose</h3>
+                  <p class="member-role">Research Lead</p>
+<!--                  <p class="member-meta">Head of the DMKI Lab and professor at TU Wien.</p>-->
+                  <a href="https://www.dbai.tuwien.ac.at/staff/khose/About_me.html" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
             </div>
           </div>
-        </div>
-      </div>
-		
-		
-      <!-- Guests -->
-      <h4 class="mt-5">Guests</h4>
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 pt-3 justify-content-center">
+        </section>
+
 		  
-		<!-- Jitse de Smet -->
-		<div class="col">
-		  <div class="card h-100 shadow-sm border-0">
-			<img src="img/posts/2025-09-JitseDeSmet.jpg" class="card-img-top rounded-circle mx-auto mt-3" alt="Jitse de Smet" style="width: 150px; height: 150px; object-fit: cover;">
-			<div class="card-body text-center">
-			  <h5 class="card-title">MSc Jitse de Smet</h5>
-			  <p class="card-text text-muted">Last seen as PhD Student at Ghent University, Belgium</p>
-			  <a href="https://jitsedesmet.be/" class="btn btn-outline-primary btn-sm" target="_blank">Website</a>
-			</div>
-		  </div>
-		</div>
+        <section class="section-block">
+          <h2 class="section-title">Postdoctoral Researchers</h2>
+<!--          <p class="section-note">Researchers leading and supporting projects across the lab’s core areas.</p>-->
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4 justify-content-center">
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/maximejakubowski.jpg" class="team-photo photo-postdoc" alt="Maxime Jakubowski" style="object-position: center 30%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">Dr. Maxime Jakubowski</h3>
+                  <p class="member-role">Postdoctoral Researcher</p>
+<!--                  <p class="member-meta">Research staff member contributing to the lab’s ongoing projects.</p>-->
+                  <a href="https://mjakubowski.info/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/milosjovanovik.jpg" class="team-photo photo-postdoc" alt="Milos Jovanovik" style="object-position: center 20%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">Dr. Milos Jovanovik</h3>
+                  <p class="member-role">Postdoctoral Researcher</p>
+<!--                  <p class="member-meta">Research staff member contributing to the lab’s ongoing projects.</p>-->
+                  <a href="https://mjovanovik.com/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/davidelongo.jpg" class="team-photo photo-postdoc" alt="Davide Mario Longo" style="object-position: center 30%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">Dr. Davide Mario Longo</h3>
+                  <p class="member-role">Postdoctoral Researcher</p>
+<!--                  <p class="member-meta">Research staff member contributing to the lab’s ongoing projects.</p>-->
+                  <a href="https://sites.google.com/view/davideml-homepage" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+			  
+          </div>
+        </section>
+		  
 		  
 
+        <section class="section-block">
+          <h2 class="section-title">PhD Students</h2>
+<!--          <p class="section-note">Doctoral researchers working on topics across data management and AI.</p>-->
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4 justify-content-center">
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/tommasodolci.jpg" class="team-photo photo-phd" alt="Tommaso Dolci" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Tommaso Dolci</h3>
+                  <p class="member-role">PhD Student</p>
+<!--                  <p class="member-meta">Doctoral researcher at the DMKI Lab.</p>-->
+                  <a href="https://tommasod.github.io" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/koumudiganepola.jpg" class="team-photo photo-phd" alt="Koumudi Ganepola" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Koumudi Ganepola</h3>
+                  <p class="member-role">PhD Student</p>
+<!--                  <p class="member-meta">Doctoral researcher at the DMKI Lab.</p>-->
+                  <a href="https://informatics.tuwien.ac.at/people/koumudi-ganepola" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/johannesschrott.jpg" class="team-photo photo-phd" alt="Johannes Schrott" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">DI Johannes Schrott</h3>
+                  <p class="member-role">PhD Student</p>
+<!--                  <p class="member-meta">Doctoral researcher at the DMKI Lab.</p>-->
+                  <a href="https://johannes.schrott.onl/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/nadersobhi.jpg" class="team-photo photo-phd" alt="Nader Sobhi" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Nader Sobhi</h3>
+                  <p class="member-role">PhD Student</p>
+<!--                  <p class="member-meta">Doctoral researcher at the DMKI Lab.</p>-->
+                  <a href="https://nader2929.github.io/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+		  
+		  
+
+        <section class="section-block">
+          <h2 class="section-title">External PhD Students</h2>
+<!--          <p class="section-note">Doctoral researchers enrolled at TU Wien and supervised in collaboration with industry or research partners.</p>-->
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4 justify-content-center">
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/gabrielecarrino.jpg" class="team-photo photo-phd" alt="Gabriele Carrino" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Gabriele Carrino</h3>
+                  <p class="member-role">PhD Student · IBM</p>
+<!--                  <p class="member-meta">External doctoral researcher collaborating with the lab.</p>-->
+                  <a href="https://it.linkedin.com/in/gabriele-carrino-a36b06295" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/yifeidong.jpg" class="team-photo photo-phd" alt="Yifei Dong" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Yifei Dong</h3>
+                  <p class="member-role">PhD Student · ARC</p>
+<!--                  <p class="member-meta">External doctoral researcher collaborating with the lab.</p>-->
+                  <a href="https://darelab.athenarc.gr/people/yifei/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/gokulkarthikkumar.jpg" class="team-photo photo-phd" alt="Gokul Karthik Kumar" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Gokul Karthik Kumar</h3>
+                  <p class="member-role">PhD Student · IBM</p>
+<!--                  <p class="member-meta">External doctoral researcher collaborating with the lab.</p>-->
+                  <a href="https://www.gokul.ch" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+		  
+		  
+
+        <section class="section-block">
+          <h2 class="section-title">PhD Students Supervised Remotely (Aalborg University)</h2>
+<!--          <p class="section-note">Doctoral researchers enrolled at Aalborg University who continue to be supervised remotely after the move to TU Wien.</p>-->
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4 justify-content-center">
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/aau/theisjendal.jpg" class="team-photo photo-phd" alt="Theis E. Jendal" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Theis E. Jendal</h3>
+                  <p class="member-role">PhD Student · AAU</p>
+<!--                  <p class="member-meta">Doctoral researcher at Aalborg University under continued remote supervision from TU Wien.</p>-->
+                  <a href="https://jendal.dk/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/aau/abirammoharanaj.jpg" class="team-photo photo-phd" alt="Abiram Mohanaraj" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Abiram Mohanaraj</h3>
+                  <p class="member-role">PhD Student · AAU</p>
+<!--                  <p class="member-meta">Doctoral researcher at Aalborg University under continued remote supervision from TU Wien.</p>-->
+                  <a href="https://vbn.aau.dk/en/persons/abiramm/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/aau/antheaskapenekakis.png" class="team-photo photo-phd" alt="Antheas Kapenekakis" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Antheas Kapenekakis</h3>
+                  <p class="member-role">PhD Student · AAU</p>
+<!--                  <p class="member-meta">Doctoral researcher at Aalborg University under continued remote supervision from TU Wien.</p>-->
+                  <a href="https://vbn.aau.dk/da/persons/antheask/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/aau/thomasheede.jpg" class="team-photo photo-phd" alt="Thomas Heede" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Thomas Heede</h3>
+                  <p class="member-role">PhD Student · AAU</p>
+<!--                  <p class="member-meta">Doctoral researcher at Aalborg University under continued remote supervision from TU Wien.</p>-->
+                  <a href="https://vbn.aau.dk/da/persons/thhe/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/aau/martinchristensen.png" class="team-photo photo-phd" alt="Martin P. Christensen" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Martin P. Christensen</h3>
+                  <p class="member-role">PhD Student · AAU</p>
+<!--                  <p class="member-meta">Doctoral researcher at Aalborg University under continued remote supervision from TU Wien.</p>-->
+                  <a href="https://vbn.aau.dk/da/persons/martin-pek%C3%A1r-christensen-2/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/aau/ernestslavrinovics.jpg" class="team-photo photo-phd" alt="Ernests Lavrinovics" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Ernests Lavrinovics</h3>
+                  <p class="member-role">PhD Student · AAU</p>
+<!--                  <p class="member-meta">Doctoral researcher at Aalborg University under continued remote supervision from TU Wien.</p>-->
+                  <a href="https://ernlavr.github.io/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/aau/ikhtiyornematov.png" class="team-photo photo-phd" alt="Ikhtiyor Nematov" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Ikhtiyor Nematov</h3>
+                  <p class="member-role">PhD Student · ULB · AAU</p>
+<!--                  <p class="member-meta">Doctoral researcher at Aalborg University under continued remote supervision from TU Wien.</p>-->
+                  <a href="https://fr.linkedin.com/in/ikhtiyor-nematov-2b2006152" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+
+            <div class="col">
+              <article class="team-card text-center">
+                <div class="team-photo-wrap">
+                  <img src="img/team/aau/yeasminaraakter.jpg" class="team-photo photo-phd" alt="Yeasmin Ara Akter" style="object-position: center 25%;" />
+                </div>
+                <div class="card-body">
+                  <h3 class="member-name">MSc Yeasmin Ara Akter</h3>
+                  <p class="member-role">PhD Student · UPC · AAU</p>
+<!--                  <p class="member-meta">Doctoral researcher at Aalborg University under continued remote supervision from TU Wien.</p>-->
+                  <a href="https://dtim.upc.edu/en/team/yeasmin-ara" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+		  
+
+        <section class="section-block alumni-grid">
+          <h2 class="section-title">Alumni</h2>
+<!--          <p class="section-note">Former researchers and students connected to the lab at TU Wien, including doctoral researchers who completed Aalborg University degrees after the move.</p>-->
+
+          <div class="mb-4">
+            <h3 class="section-title" style="font-size: 1.1rem; margin-bottom: 1rem;">Postdocs</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4 justify-content-center">
+              <div class="col">
+                <article class="team-card alumni-card text-center">
+                  <div class="team-photo-wrap">
+                    <img src="img/team/dominiktomaszuk.jpg" class="team-photo photo-alumni" alt="Dominik Tomaszuk" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="member-name">Dr. Dominik Tomaszuk</h3>
+                    <p class="member-role">Former Postdoctoral Researcher</p>
+                    <p class="member-meta">Last seen as researcher at the University of Bialystok, Poland.</p>
+                    <a href="http://ii.uwb.edu.pl/~dtomaszuk/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="section-title" style="font-size: 1.1rem; margin-bottom: 1rem;">Guests</h3>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4 justify-content-center">
+              <div class="col">
+                <article class="team-card alumni-card text-center">
+                  <div class="team-photo-wrap">
+                    <img src="img/posts/2025-09-JitseDeSmet.jpg" class="team-photo photo-alumni" alt="Jitse de Smet" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="member-name">MSc Jitse de Smet</h3>
+                    <p class="member-role">Guest Researcher</p>
+                    <p class="member-meta">Last seen as PhD student at Ghent University, Belgium.</p>
+                    <a href="https://jitsedesmet.be/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+			
+          <div class="mb-4">
+            <h3 class="section-title" style="font-size: 1.1rem; margin-bottom: 1rem;">Aalborg University PhD Alumni</h3>
+<!--            <p class="section-note">Doctoral researchers who remained enrolled at Aalborg University and completed their PhD after the transition to TU Wien.</p>-->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 g-4 justify-content-center">
+              <div class="col">
+                <article class="team-card alumni-card text-center">
+                  <div class="team-photo-wrap">
+                    <img src="img/team/aau/kashifrabbani.jpg" class="team-photo photo-alumni" alt="Kashif Rabbani" style="object-position: center 25%;" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="member-name">Kashif Rabbani, PhD</h3>
+                    <p class="member-role">PhD Graduate · AAU</p>
+                    <p class="member-meta">Last seen as Research Ontologist at Novo Nordisk, Denmark.</p>
+                    <a href="https://kashif-rabbani.github.io/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col">
+                <article class="team-card alumni-card text-center">
+                  <div class="team-photo-wrap">
+                    <img src="img/team/aau/olivierpelgrin.jpg" class="team-photo photo-alumni" alt="Olivier Pelgrin" style="object-position: center 25%;" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="member-name">Olivier Pelgrin, PhD</h3>
+                    <p class="member-role">PhD Graduate · AAU</p>
+                    <p class="member-meta">Last seen as Quantitative Researcher at Norlys Energy Trading A/S, Denmark.</p>
+                    <a href="https://www.linkedin.com/in/olivier-pelgrin-60703082/" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                  </div>
+                </article>
+              </div>
+				
+              <div class="col">
+                <article class="team-card alumni-card text-center">
+                  <div class="team-photo-wrap">
+                    <img src="img/team/aau/emilhansen.jpg" class="team-photo photo-alumni" alt="Emil Riis Hansen" style="object-position: center 25%;" />
+                  </div>
+                  <div class="card-body">
+                    <h3 class="member-name">Emil Riis Hansen, PhD</h3>
+                    <p class="member-role">PhD Graduate · AAU</p>
+                    <p class="member-meta">Last seen as Senior Quantitative Developer at Norlys Energy Trading A/S, Denmark.</p>
+                    <a href="https://dk.linkedin.com/in/emil-riis-hansen" class="profile-link" target="_blank" rel="noopener">Personal Website</a>
+                  </div>
+                </article>
+              </div>
+				
+            </div>
+          </div>
+			
+        </section>
+      </div>
     </section>
-  </div>
-	
-</section>
-	
-<!-- Contact & Footer Section-->
-<div data-include="footer.html"></div>
-	
-<script src="scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </main>
+
+  <div data-include="footer.html" class="footer-shell"></div>
+
+  <script src="scripts.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
