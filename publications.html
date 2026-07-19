@@ -50,16 +50,28 @@ body {
       border-bottom: 1px solid rgba(15, 23, 42, .10);
     }
 
-    .pub-list {
-      list-style: none;
-      padding-left: 0;
-      margin-top: 0.75rem;
-    }
+	.pub-list {
+		counter-reset: pub;
+		list-style: none;
+		padding-left: 2.5rem;
+	}
 
-    .pub-item {
-      padding: 0.55rem 0;
-      border-bottom: 1px solid rgba(15, 23, 42, .06);
-    }
+	.pub-item {
+		counter-increment: pub;
+		position: relative;
+		padding: 0.55rem 0;
+		border-bottom: 1px solid rgba(15, 23, 42, .06);
+	}
+
+	.pub-item::before {
+		content: counter(pub) ".";
+		position: absolute;
+		left: -2.3rem;
+		width: 2rem;
+		text-align: right;
+		font-weight: 600;
+		color: #64748b;
+	}
 
     .pub-item:last-child {
       border-bottom: none;
@@ -295,6 +307,20 @@ body {
                     <span class="pub-venue">In: <a href="https://vldb.org/2026/" target="_blank">VLDB 2026</a>, to appear</span>
                 </div>
             </li>
+			
+            <li class="pub-item">
+                <div class="pub-main">
+                    <div class="pub-title">Interoperability in Healthcare: A Primer and New Frontiers</div>
+                    <div class="pub-meta">
+                        <span class="pub-tag">to appear</span>
+                    </div>
+                </div>
+                <div class="pub-subline">
+                    <span class="pub-authors">A. Ionescu, P. Carbone, S. Meijer, C. Koutras, J. Freire, <a href="http://katja-hose.de" target="_blank">K. Hose</a>, J. Raghothama</span>
+                    <span class="pub-sep">·</span>
+                    <span class="pub-venue">In: <a href="https://vldb.org/2026/" target="_blank">VLDB 2026</a>, to appear</span>
+                </div>
+            </li>
 
             <li class="pub-item">
                 <div class="pub-main">
@@ -304,7 +330,7 @@ body {
                     </div>
                 </div>
                 <div class="pub-subline">
-                    <span class="pub-authors">Katya Mirylenka, Egor Malykh, Mahdyar Ravanbakhsh, Michael Gygli, Marco-Andrea Buchmann, Andrew Dzhoha, Svitlana Borzenko, Francesca Catino, Mohamed Gaafar, Thomas Kober, Dario d'Andrea, Ellie Langhans</span>
+                    <span class="pub-authors">K. Mirylenka, E. Malykh, M. Ravanbakhsh, M. Gygli, M. Buchmann, A. Dzhoha, S. Borzenko, F. Catino, M. Gaafar, T. Kober, D. d'Andrea, E. Langhans</span>
                     <span class="pub-sep">·</span>
                     <span class="pub-venue">In: <a href="https://ecmlpkdd.org/2026/" target="_blank">ECML-PKDD 2026</a>, to appear</span>
                 </div>
